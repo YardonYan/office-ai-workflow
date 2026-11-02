@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>行动清单示例 · office-ai-workflow</title>
+<style>
+  :root {
+    --bg: #F7F5F0; --paper: #FFF; --ink: #1F2328; --muted: #6B675E;
+    --faint: #A39E93; --green: #2F5D50; --green-l: #E4EDE9;
+    --clay: #B4592F; --line: #DED9CE;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    line-height: 1.7; padding: 48px 20px 72px;
+  }
+  .sheet {
+    max-width: 780px; margin: 0 auto; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 6px; padding: 44px 52px 48px;
+  }
+  .kicker { font: 11px/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: 1.5px; color: var(--faint); text-transform: uppercase; }
+  h1 { font-size: 24px; font-weight: 600; margin: 10px 0 6px; }
+  .lede { font-size: 14px; color: var(--muted); margin-bottom: 30px; }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    text-align: left; font-size: 11.5px; color: var(--muted); font-weight: 500;
+    padding: 10px 10px 12px; border-bottom: 1px solid var(--ink); letter-spacing: .3px;
+  }
+  tbody td { padding: 13px 10px; border-bottom: 1px solid #F1EEE7; font-size: 14px; vertical-align: top; }
+  tbody tr:hover { background: #FBFBF8; }
+  .item { font-weight: 500; }
+  .item small { display: block; font-weight: 400; color: var(--faint); font-size: 12px; margin-top: 3px; }
+  .who { color: var(--muted); font-size: 13px; }
+  .who.tbd { color: var(--clay); }
+  .when { font: 12px/1.6 ui-monospace, Menlo, Consolas, monospace; color: var(--muted); white-space: nowrap; }
+  .src { color: var(--faint); font-size: 12px; }
+  .flag {
+    display: inline-block; font: 10px/1 ui-monospace, Menlo, Consolas, monospace;
+    background: #FDF3EE; color: var(--clay); border: 1px solid #F0D9C9;
+    padding: 3px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle;
+  }
+  .summary {
+    margin-top: 26px; padding: 14px 18px; background: #FBFBF9;
+    border: 1px dashed var(--line); border-radius: 5px; font-size: 13.5px; color: var(--muted);
+  }
+  .summary b { color: var(--ink); }
+  footer {
+    margin-top: 34px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 11.5px; color: var(--faint);
+  }
+  @media (max-width: 640px) {
+    .sheet { padding: 28px 18px; }
+    thead { display: none; }
+    tbody td { display: block; border: none; padding: 4px 0; }
+    tbody tr { display: block; padding: 14px 0; border-bottom: 1px solid #F1EEE7; }
+  }
+  @media print { body { background: #fff; padding: 0; } .sheet { border: none; padding: 0; max-width: none; } }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="kicker">Action List</div>
+  <h1>行动清单</h1>
+  <p class="lede">从 4 份会议纪要与 1 份复盘报告提取，共 12 条，其中 3 条负责人原文未指定。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:44%">事项</th>
+        <th style="width:16%">负责人</th>
+        <th style="width:14%">时间</th>
+        <th style="width:26%">原文依据</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="item">出交付节点整改方案<small>针对客户反馈集中的交付周期问题</small></td>
+        <td class="who tbd">待指定 <span class="flag">原文未写</span></td>
+        <td class="when">11-10</td>
+        <td class="src">客户反馈汇总 第一条</td>
+      </tr>
+      <tr>
+        <td class="item">改稿流程加一道书面确认</td>
+        <td class="who">项目经理</td>
+        <td class="when">11-05</td>
+        <td class="src">会议纪要 10-18 第三段</td>
+      </tr>
+      <tr>
+        <td class="item">提供新旧字段对照表</td>
+        <td class="who">后端</td>
+        <td class="when">11-03</td>
+        <td class="src">会议纪要 11-02 决议二</td>
+      </tr>
+      <tr>
+        <td class="item">准备展会物料<small>含展架、样册、伴手礼</small></td>
+        <td class="who">设计组</td>
+        <td class="when">11-15</td>
+        <td class="src">部门通知 10-25</td>
+      </tr>
+      <tr>
+        <td class="item">补全上月遗留的材料清单</td>
+        <td class="who tbd">待指定 <span class="flag">原文未写</span></td>
+        <td class="when">11-08</td>
+        <td class="src">会议纪要 10-28 末段</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="summary">
+    合计 <b>12 条</b>待办，其中 <b>3 条</b>负责人原文未指定、<b>1 条</b>时间为「本周内」未落到具体日期。
+    这两类需要补充后才能派活。
+  </div>
+
+  <footer>office-ai-workflow · 示例产出 · 负责人与时间只写原文明确的，不推测</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "$comment": "触发规则表示例。复制后改成你自己的。字段含义见 references/automation.md。",
+  "version": "1.0",
+  "owner": "Yardon",
+  "updated": "2026-11-03",
+  "rules": [
+    {
+      "name": "周报",
+      "when": {
+        "type": "schedule",
+        "at": "每周五 16:00"
+      },
+      "do": "按三段式出周报：进展、风险、下周计划",
+      "skill": "templates/06-weekly.md",
+      "notify": "直接发，不用问",
+      "max_minutes": 20
+    },
+    {
+      "name": "项目复盘",
+      "when": {
+        "type": "event",
+        "trigger": "项目结项当天"
+      },
+      "do": "按 GRAI 出复盘初稿",
+      "skill": "references/corpus/01-formats.md#六复盘",
+      "notify": "出初稿后告诉我，我过一遍再发",
+      "max_minutes": 60
+    },
+    {
+      "name": "会议纪要",
+      "when": {
+        "type": "event",
+        "trigger": "会议结束后 2 小时内"
+      },
+      "do": "提炼讨论要点、决议与待办，待办四列带负责人和截止",
+      "skill": "templates/02-extract.md",
+      "notify": "直接发群里，负责人缺失的单独标给我",
+      "max_minutes": 15
+    },
+    {
+      "name": "返工率异常",
+      "when": {
+        "type": "threshold",
+        "metric": "月度返工率",
+        "op": ">",
+        "value": 0.2
+      },
+      "do": "检查改稿与口径环节，列出可能原因",
+      "skill": "references/design.md",
+      "notify": "立刻告诉我，这条要人判断",
+      "max_minutes": 30
+    },
+    {
+      "name": "延期预警",
+      "when": {
+        "type": "threshold",
+        "metric": "任务延期天数",
+        "op": ">=",
+        "value": 3
+      },
+      "do": "列出受影响的下游任务与补救方案",
+      "skill": "templates/05-report.md",
+      "notify": "立刻，且必须带两个可选方案",
+      "max_minutes": 20
+    },
+    {
+      "name": "客户投诉聚集",
+      "when": {
+        "type": "threshold",
+        "metric": "同一客户月内投诉次数",
+        "op": ">=",
+        "value": 2
+      },
+      "do": "汇总投诉点，给一条改进建议",
+      "skill": "references/corpus/03-samples.md",
+      "notify": "当天告诉我，我决定要不要登门",
+      "max_minutes": 40
+    }
+  ],
+  "not_rules": [
+    "只需要一句话回答的事，不进规则表",
+    "一次性的临时任务，直接做，不建流程",
+    "需要临场判断的（谈判、危机处理），不设自动触发"
+  ]
+}

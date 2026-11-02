@@ -6,7 +6,7 @@
 
 #### Design an office pipeline, then run it
 
-[![Version](https://img.shields.io/badge/version-2.5.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.6.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
@@ -95,6 +95,23 @@ More important than memorising the seven steps. Scenarios vary; the principles d
 
 Some work looks like office work but should not go through a pipeline. The test: if it needs one decision or one action, skip the pipeline. Pipelines exist for multiple handoffs, multiple people, and a record.
 
+## Maturity and governance
+
+Building the pipeline is the start. You also need to know what level it sits at and whether it can fail safely.
+
+| Level | Name | Test |
+|---|---|---|
+| L1 | Assisted generation | A person drives, the assistant drafts |
+| L2 | Controlled automation | Fixed steps, fixed artifacts, a person only checks (the seven steps live here) |
+| L3 | Autonomous execution | Triggered by signals, only escalates on exceptions |
+| L4 | Self-optimising | Spots its own redundancy and proposes removal |
+
+Most office work stops at L2. Going up needs three things, none of them tools: a trigger, a pass/fail criterion, and an exception exit.
+
+Governance is four questions: who enables it, who is isolated from whom, who hears about overreach, and who signs off. The last one is the most skipped — **an assistant saying it is done does not make it done.**
+
+Details: [`references/maturity.md`](./references/maturity.md).
+
 ## Templates
 
 Seven copy-paste prompts under `templates/`. Each carries inputs, the prompt, an output contract, an acceptance list and failure handling.
@@ -123,14 +140,20 @@ It works the steps one at a time and stops at each checklist before moving on.
 
 ## What the output looks like
 
-Two HTML files, open them directly. They are samples and templates at once: copy, replace the content, and you have a first draft.
+Six single-file HTML pages. Open one, and you are looking at a finished deliverable — copy it, replace the content, ship it.
+
+**Live preview**: https://yardonyan.github.io/office-ai-workflow/examples/
 
 | Sample | What to look at |
 |---|---|
-| [Research brief](./examples/research-brief.html) | Three columns, sources, consequence, one closing action |
-| [Monthly review](./examples/monthly-review.html) | Five-section skeleton, bar chart with a stated formula, risks with responses |
+| [Research brief](https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html) | Three columns, sources, consequence, one closing action |
+| [Action list](https://yardonyan.github.io/office-ai-workflow/examples/action-list.html) | Five-field extraction, how missing owners are marked |
+| [Weekly report](https://yardonyan.github.io/office-ai-workflow/examples/weekly.html) | Three sections, under 400 words, risk with conditions |
+| [Meeting minutes](https://yardonyan.github.io/office-ai-workflow/examples/minutes.html) | Five sections, action table with owner and due date |
+| [Monthly review](https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html) | Five-section skeleton, bar chart with a stated formula |
+| [Index](https://yardonyan.github.io/office-ai-workflow/examples/index.html) | Entry page for all samples |
 
-Both are single-file, dependency-free and print-friendly. The layout is yours to reuse or rebrand.
+All single-file, dependency-free, print-friendly.
 
 ## Corpus
 
@@ -175,7 +198,7 @@ Supported apps include WorkBuddy, CodeBuddy, TRAE (CN and international), Qoder 
 | `references/examples.md` | Three worked cases |
 | `references/corpus/` | Corpus: sources, six skeletons, a phrase bank, six samples, real-output rules |
 | `templates/` | Seven copy-paste prompt templates, plus an optional `pipeline-state.yaml` |
-| `examples/` | Two HTML samples, usable as templates |
+| `examples/` | Six HTML samples, usable as templates |
 
 ## Non-negotiables
 

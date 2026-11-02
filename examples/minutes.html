@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>会议纪要示例 · office-ai-workflow</title>
+<style>
+  :root {
+    --bg: #F7F5F0; --paper: #FFF; --ink: #1F2328; --muted: #6B675E;
+    --faint: #A39E93; --green: #2F5D50; --green-l: #E4EDE9;
+    --clay: #B4592F; --line: #DED9CE;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    line-height: 1.7; padding: 48px 20px 72px;
+  }
+  .sheet {
+    max-width: 780px; margin: 0 auto; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 6px; padding: 44px 52px 48px;
+  }
+  .kicker { font: 11px/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: 1.5px; color: var(--faint); text-transform: uppercase; }
+  h1 { font-size: 24px; font-weight: 600; margin: 10px 0 26px; }
+  .meta {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px 24px; padding: 16px 18px; background: #FBFBF9;
+    border: 1px solid var(--line); border-radius: 5px; margin-bottom: 32px;
+  }
+  .meta div { font-size: 13px; }
+  .meta span { color: var(--faint); margin-right: 8px; }
+  section { margin-bottom: 30px; }
+  h2 {
+    font-size: 13px; font-weight: 600; color: var(--green); letter-spacing: .5px;
+    margin-bottom: 12px; padding-left: 10px; border-left: 2px solid var(--green);
+  }
+  ol, ul { padding-left: 20px; }
+  li { font-size: 14.5px; padding: 5px 0; }
+  .decision {
+    background: var(--green-l); border-radius: 5px; padding: 14px 18px; margin-bottom: 10px;
+  }
+  .decision b { color: var(--green); }
+  .decision p { font-size: 14.5px; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 4px; }
+  th { text-align: left; font-size: 11.5px; color: var(--muted); font-weight: 500; padding: 8px 8px 10px; border-bottom: 1px solid var(--ink); }
+  td { padding: 11px 8px; border-bottom: 1px solid #F4F1EA; vertical-align: top; }
+  td:first-child { color: var(--faint); font: 12px/1.6 ui-monospace, Menlo, Consolas, monospace; width: 28px; }
+  td:nth-child(3), td:nth-child(4) { font-size: 13px; color: var(--muted); white-space: nowrap; }
+  .note { font-size: 12.5px; color: var(--faint); margin-top: 10px; }
+  footer {
+    margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 11.5px; color: var(--faint);
+  }
+  @media (max-width: 640px) { .sheet { padding: 28px 22px; } td:nth-child(3), td:nth-child(4) { white-space: normal; } }
+  @media print { body { background: #fff; padding: 0; } .sheet { border: none; padding: 0; max-width: none; } }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="kicker">Meeting Minutes</div>
+  <h1>X 系统一期协调会 会议纪要</h1>
+
+  <div class="meta">
+    <div><span>时间</span>11-02 14:00–15:10</div>
+    <div><span>地点</span>三楼小会议室</div>
+    <div><span>主持</span>项目经理 A</div>
+    <div><span>记录</span>我</div>
+    <div><span>参会</span>后端、前端、测试、业务</div>
+    <div><span>缺席</span>无</div>
+  </div>
+
+  <section>
+    <h2>议程</h2>
+    <ol>
+      <li>联调进度与阻塞</li>
+      <li>上线时间确认</li>
+      <li>业务侧验收安排</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>讨论要点</h2>
+    <ul>
+      <li>接口文档 10-29 到齐，联调 11-02 开始，预计 11-05 完成。</li>
+      <li>新接口字段口径与旧版有三处不同，需要确认后才能切换。</li>
+      <li>业务希望 11-20 上线，技术上可行，前提是 11-12 能提测。</li>
+      <li>业务侧需要提前拿到测试账号，否则验收时间不够。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>决议</h2>
+    <div class="decision">
+      <b>一、上线时间定 11-20</b>
+      <p>不再顺延。任何延期需求走变更流程。</p>
+    </div>
+    <div class="decision">
+      <b>二、字段口径三处差异</b>
+      <p>由后端在 11-03 前给出对照表，业务确认后同步全员。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>待办</h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>任务</th><th>负责人</th><th>截止</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>出新旧字段对照表，业务确认后同步全员</td><td>后端</td><td>11-03</td></tr>
+        <tr><td>2</td><td>提供测试账号 5 个，含业务角色</td><td>前端</td><td>11-04</td></tr>
+        <tr><td>3</td><td>按业务场景列验收清单</td><td>业务</td><td>11-08</td></tr>
+        <tr><td>4</td><td>联调完成并提测，卡点日报</td><td>后端</td><td>11-12</td></tr>
+      </tbody>
+    </table>
+    <p class="note">下次会议先过这张表，完成的销掉，没完成的问原因。</p>
+  </section>
+
+  <footer>office-ai-workflow · 示例产出 · 会后当天发出</footer>
+
+</div>
+</body>
+</html>

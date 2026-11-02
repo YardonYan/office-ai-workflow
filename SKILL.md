@@ -6,7 +6,7 @@ compatibility: 任何支持 Markdown 与文件读写的 AI 助手；不需要脚
 metadata:
   author: Yardon
   author-url: https://github.com/YardonYan
-  version: "2.5.0"
+  version: "2.6.0"
   created: "2026-11-02"
   updated: "2026-11-02"
   category: office
@@ -379,10 +379,12 @@ metadata:
 | `references/design.md` | 要从零设计自己的工作流，需要更细的判断标准与常见陷阱 |
 | `references/mindset.md` | 怀疑任务本身问错了、方案不确定对不对、流程越加越长 |
 | `references/automation.md` | 想让流程不用靠人记，或者判断步骤是不是太多 |
+| `references/maturity.md` | 想知道自己这条流程在什么水平、会不会出事、该不该继续升级 |
 | `references/steps-deep.md` | 具体某一步不会做，要看输入输出定义和常见错误 |
 | `references/variants.md` | 手上的任务不是完整七步，要挑一个变体 |
 | `references/scenarios.md` | 要给客户交东西、跨部门联合出品、或换成本行业流程 |
 | `references/sharing.md` | 要把流程写成文档给别人用，参照现成写法 |
 | `references/examples.md` | 想照着完整案例走一遍 |
+| `examples/` | 六份 HTML 成品，直接打开看效果 |
 | `references/corpus/` | 语料：六种文档骨架、措辞库、六篇范文 |
-| `templates/` | 七份可直接复制的提示词模板，外加可选的 `pipeline-state.yaml` |
+| `templates/` | 七份提示词模板，加可选的 `pipeline-state.yaml`（进度状态）与 `rules.json`（触发规则） |

@@ -6,12 +6,12 @@
 
 #### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-2.5.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.6.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
 [![Steps](https://img.shields.io/badge/steps-7-D97706.svg)](#七步)
-[![Platform](https://img.shields.io/badge/platform-WorkBuddy%20%C2%B7%20CodeBuddy%20%C2%B7%20TRAE%20%C2%B7%20Qoder%20%C2%B7%20Claude%20Code-orange.svg)](#安装)
+[![Platform](https://img.shields.io/badge/platform-18%20tools-brightgreen.svg)](#安装)
 
 </div>
 
@@ -112,6 +112,23 @@
 
 细节与办公场景的例子见 [`references/mindset.md`](./references/mindset.md)。
 
+## 成熟度与治理
+
+流程做出来只是开始，还要知道它在什么水平、会不会出事。
+
+| 级别 | 叫什么 | 判断标准 |
+|---|---|---|
+| L1 | 辅助生成 | 人做主体，AI 出草稿 |
+| L2 | 受控自动化 | 固定步骤固定产出，人只核对（七步在这一级） |
+| L3 | 自主执行 | 有触发信号，异常才找人 |
+| L4 | 自优化 | 自己能发现冗余并提议删减 |
+
+多数办公场景做到 L2 就够了。往上走的门槛不是工具，是三样东西：触发信号、判断依据、异常出口。
+
+治理只问四句：谁开通、谁隔离、越界谁知、验收谁签。第四句最常被跳过——**AI 说完成不算完成，得有人核对过才算。**
+
+细节见 [`references/maturity.md`](./references/maturity.md)。
+
 ## 模板
 
 `templates/` 下七份，复制就能用。每份含输入说明、提示词原文、输出契约、验收清单、失败处理。
@@ -154,14 +171,20 @@
 
 ## 成品长什么样
 
-两份 HTML，双击就能打开。它们既是示例，也是模板：复制过去替换内容，就是你的初稿。
+六份单文件 HTML，点开就能看，也能直接当模板用：复制过去替换内容，就是你的初稿。
+
+**在线预览**：https://yardonyan.github.io/office-ai-workflow/examples/
 
 | 示例 | 看什么 |
 |---|---|
-| [信息简报](./examples/research-brief.html) | 三列结构、来源标注、影响判断、结尾一个建议动作 |
-| [月度复盘](./examples/monthly-review.html) | 五页骨架、数据条与口径说明、问题页带应对 |
+| [信息简报](https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html) | 三列结构、来源标注、影响判断、结尾一个建议动作 |
+| [行动清单](https://yardonyan.github.io/office-ai-workflow/examples/action-list.html) | 五要素提取，负责人缺失怎么标 |
+| [周报](https://yardonyan.github.io/office-ai-workflow/examples/weekly.html) | 三段式，400 字以内，风险带条件 |
+| [会议纪要](https://yardonyan.github.io/office-ai-workflow/examples/minutes.html) | 五段结构，待办四列 |
+| [月度复盘](https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html) | 五页骨架、数据条与口径说明、问题页带应对 |
+| [示例目录](https://yardonyan.github.io/office-ai-workflow/examples/index.html) | 全部示例的入口页 |
 
-两份都是单文件、无外部依赖、打印友好。配色和排版可以直接复用，也可以按你的品牌改。
+全部单文件、无外部依赖、打印友好。配色和排版可以直接复用，也可以按你的品牌改。
 
 ## 语料
 
@@ -216,6 +239,7 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/design.md` | 从零设计的完整版：三种起点、记录真实过程、六个陷阱、最小可用流程 |
 | `references/mindset.md` | 五种思考方式：第一性原理、对抗性审查、消融实验、奥卡姆剃刀、边界检查 |
 | `references/automation.md` | 从人驱动到信号驱动：三类触发器、规则表、单一出口、定过的事、定期减法 |
+| `references/maturity.md` | 成熟度 L1–L4、升级路径、治理四问、从成功一次到成功率 |
 | `references/sharing.md` | 怎么写文档：八段结构、三种形态、第一屏、维护 |
 | `references/why-and-how.md` | 别人怎么搭流水线：四种流派与共有机制 |
 | `references/steps-deep.md` | 每步的输入、动作、产物定义、检查项、常见错误 |
@@ -223,8 +247,8 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/scenarios.md` | 客户材料、跨部门、行业流程改造 |
 | `references/examples.md` | 三个完整案例 |
 | `references/corpus/` | 语料：来源说明、六种文档骨架、措辞库、六篇范文、真实产出收录规范 |
-| `templates/` | 七份可直接复制的提示词模板，外加可选的 `pipeline-state.yaml` |
-| `examples/` | 两份 HTML 成品，可当模板用 |
+| `templates/` | 七份提示词模板，加 `pipeline-state.yaml` 与 `rules.json` |
+| `examples/` | 六份 HTML 成品，可当模板用 |
 
 ## 硬性底线
 

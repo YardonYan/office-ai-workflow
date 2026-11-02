@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>周报示例 · office-ai-workflow</title>
+<style>
+  :root {
+    --bg: #F7F5F0; --paper: #FFF; --ink: #1F2328; --muted: #6B675E;
+    --faint: #A39E93; --green: #2F5D50; --green-l: #E4EDE9;
+    --clay: #B4592F; --line: #DED9CE;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    line-height: 1.75; padding: 48px 20px 72px;
+  }
+  .sheet {
+    max-width: 720px; margin: 0 auto; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 6px; padding: 44px 52px 48px;
+  }
+  .top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .kicker { font: 11px/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: 1.5px; color: var(--faint); text-transform: uppercase; }
+  .status {
+    font: 11px/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: .8px;
+    color: var(--green); background: var(--green-l); padding: 5px 9px; border-radius: 3px;
+  }
+  h1 { font-size: 24px; font-weight: 600; margin: 12px 0 6px; }
+  .lede { font-size: 14.5px; color: var(--muted); padding-bottom: 22px; border-bottom: 2px solid var(--ink); }
+  section { margin-top: 30px; }
+  h2 {
+    font-size: 13px; font-weight: 600; color: var(--green);
+    letter-spacing: .5px; margin-bottom: 12px; padding-left: 10px; border-left: 2px solid var(--green);
+  }
+  ul { list-style: none; }
+  li {
+    font-size: 14.5px; padding: 7px 0 7px 16px; position: relative;
+    border-bottom: 1px solid #F4F1EA;
+  }
+  li:last-child { border-bottom: none; }
+  li::before {
+    content: ""; position: absolute; left: 0; top: 16px;
+    width: 4px; height: 4px; border-radius: 50%; background: var(--faint);
+  }
+  li b { font-weight: 600; }
+  li em { font-style: normal; font: 11px/1 ui-monospace, Menlo, Consolas, monospace; color: var(--faint); margin-left: 6px; }
+  .risk { background: #FDF6F1; border-left: 2px solid var(--clay); padding: 12px 16px; font-size: 14px; }
+  .risk b { color: var(--clay); }
+  .ask { background: #FBFBF9; border: 1px dashed var(--line); border-radius: 5px; padding: 14px 16px; font-size: 14px; }
+  footer {
+    margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 11.5px; color: var(--faint); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  @media (max-width: 640px) { .sheet { padding: 28px 22px; } }
+  @media print { body { background: #fff; padding: 0; } .sheet { border: none; padding: 0; max-width: none; } }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="top">
+    <span class="kicker">Weekly · 10-27 至 10-31</span>
+    <span class="status">正常</span>
+  </div>
+  <h1>运营周报</h1>
+  <p class="lede">本周完成 3 项，注册转化提升 3 个百分点，一项预算待批。</p>
+
+  <section>
+    <h2>本周进展</h2>
+    <ul>
+      <li><b>完成 10 月活动复盘初稿</b>，覆盖 3 场活动，数据已对过后台 <em>10-29</em></li>
+      <li><b>新客引导流程改到第二版</b>，注册转化 12% → 15%，样本 800 人 <em>10-30</em></li>
+      <li><b>内容排期敲定到 11-15</b>，已同步设计组 <em>10-31</em></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>风险与阻塞</h2>
+    <div class="risk">
+      <b>11-05 投放预算未批。</b>如果周二前下不来，首波投放推到下周，本月新增会少约两天量。
+    </div>
+  </section>
+
+  <section>
+    <h2>下周计划</h2>
+    <ul>
+      <li>11-04 前完成活动复盘终稿</li>
+      <li>11-06 前上线新客引导第二版，观察一周数据</li>
+      <li>跟进投放预算审批，周二拿不到就调整首波排期</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>需要支持</h2>
+    <div class="ask">
+      需要市场部确认 11 月投放素材清单，周三前给到，否则设计排期来不及。
+    </div>
+  </section>
+
+  <footer>
+    <span>office-ai-workflow · 示例产出</span>
+    <span>三段式，400 字以内</span>
+  </footer>
+
+</div>
+</body>
+</html>

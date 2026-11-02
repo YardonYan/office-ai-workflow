@@ -2,6 +2,19 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.6.0 — 2026-11-03
+
+### Added
+
+- `references/maturity.md` — four maturity levels (assisted, controlled automation, autonomous execution, self-optimising), the three things needed to climb, four governance questions, and the shift from "it worked once" to "success rate over ten runs".
+- Four more HTML samples: weekly report, meeting minutes, action list, and an index page. Six in total, all reachable through GitHub Pages.
+- `templates/rules.json` — a trigger rule table: what signal, what to do, which template, and whether to notify a person.
+
+### Changed
+
+- Every example now has a live URL under the project's Pages site, so samples open in a browser instead of showing raw source.
+- The platform badge names no specific vendor.
+
 ## 2.5.0 — 2026-11-03
 
 ### Added
