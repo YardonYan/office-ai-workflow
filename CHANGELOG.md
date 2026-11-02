@@ -2,6 +2,15 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.2.0 — 2026-11-03
+
+### Added
+
+- `references/corpus/01-formats.md` — six document skeletons (weekly, monthly, minutes, email, proposal, retrospective), each with acceptance tests and common mistakes. Retrospective covers GRAI, KPT and AAR, plus the four taboos.
+- `references/corpus/02-phrases.md` — a phrase bank organised by where it sits in a document, with a banned-word list and a weak-to-strong rewrite table, plus rules for numbers and dates.
+- `references/corpus/03-samples.md` — six full samples across ops, project management, meetings, cross-team email, a one-page proposal and a GRAI retrospective. Each marks what to copy and what not to.
+- Main file gained a section on how to use the corpus: copy the structure, rewrite the phrasing, replace every number.
+
 ## 2.1.0 — 2026-11-03
 
 ### Added

@@ -6,7 +6,7 @@ compatibility: 任何支持 Markdown 与文件读写的 AI 助手；不需要脚
 metadata:
   author: Yardon
   author-url: https://github.com/YardonYan
-  version: "2.1.0"
+  version: "2.2.0"
   created: "2026-11-02"
   updated: "2026-11-02"
   category: office
@@ -256,6 +256,20 @@ metadata:
 
 更细的写法，包括每种文档的骨架和常见错误，见 `references/sharing.md`。
 
+## 语料怎么用
+
+写周报、月报、纪要、邮件、方案、复盘时，不必从空白页开始。`references/corpus/` 下有三份：
+
+| 文件 | 里面有什么 | 什么时候翻 |
+|---|---|---|
+| `01-formats.md` | 六种文档的骨架，每种带判据和常见错误 | 不知道分几段、每段该放什么 |
+| `02-phrases.md` | 按位置分的措辞库：开场、进展、成果、问题、计划、收尾 | 知道要说什么，但写出来干巴巴 |
+| `03-samples.md` | 六篇完整范文，覆盖运营、项目、会议、邮件、方案、复盘 | 想看看成型的什么样 |
+
+用法是拆开用，不是整篇套：结构照抄，句式改写，数据全换。
+
+有一条值得单独记：**进展表述里，动词决定信息量。** 推进、跟进、处理、优化这些词单独用等于没说，后面必须跟宾语和结果。
+
 ## 检查点怎么设
 
 三条规矩：
@@ -313,4 +327,5 @@ metadata:
 | `references/scenarios.md` | 要给客户交东西、跨部门联合出品、或换成本行业流程 |
 | `references/sharing.md` | 要把流程写成文档给别人用，参照现成写法 |
 | `references/examples.md` | 想照着完整案例走一遍 |
+| `references/corpus/` | 语料：六种文档骨架、措辞库、六篇范文 |
 | `templates/` | 七份可直接复制的提示词模板 |

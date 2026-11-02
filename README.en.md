@@ -6,7 +6,7 @@
 
 #### Design an office pipeline, then run it
 
-[![Version](https://img.shields.io/badge/version-2.1.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.2.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
@@ -116,6 +116,18 @@ Two HTML files, open them directly. They are samples and templates at once: copy
 
 Both are single-file, dependency-free and print-friendly. The layout is yours to reuse or rebrand.
 
+## Corpus
+
+No blank page when you write a weekly, a monthly, minutes, an email, a proposal or a retrospective.
+
+| File | Content |
+|---|---|
+| [`corpus/01-formats.md`](./references/corpus/01-formats.md) | Six document skeletons, each with acceptance tests and common mistakes |
+| [`corpus/02-phrases.md`](./references/corpus/02-phrases.md) | Phrase bank by position: opening, progress, results, problems, plans, closing — plus banned words and weak-to-strong rewrites |
+| [`corpus/03-samples.md`](./references/corpus/03-samples.md) | Six full samples: ops weekly, project monthly, meeting minutes, cross-team email, one-page proposal, GRAI retrospective |
+
+Use them by parts, not whole: copy the structure, rewrite the phrasing, replace every number.
+
 ## Install
 
 ```bash
@@ -141,6 +153,7 @@ Supported apps include WorkBuddy, CodeBuddy, TRAE (CN and international), Qoder 
 | `references/variants.md` | Six variants: three-step, weekly, retrospective, meeting, competitor, chat-only |
 | `references/scenarios.md` | Client-facing material, cross-team output, adapting to an industry |
 | `references/examples.md` | Three worked cases |
+| `references/corpus/` | Corpus: six document skeletons, a phrase bank, six samples |
 | `templates/` | Seven copy-paste prompt templates |
 | `examples/` | Two HTML samples, usable as templates |
 
