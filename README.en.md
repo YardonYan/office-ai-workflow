@@ -174,8 +174,7 @@ No blank page when you write a weekly, a monthly, minutes, an email, a proposal 
 | [`corpus/01-formats.md`](./references/corpus/01-formats.md) | Six document skeletons, each with acceptance tests and common mistakes |
 | [`corpus/02-phrases.md`](./references/corpus/02-phrases.md) | Phrase bank by position: opening, progress, results, problems, plans, closing — plus banned words and weak-to-strong rewrites |
 | [`corpus/03-samples.md`](./references/corpus/03-samples.md) | Six full samples: ops weekly, project monthly, meeting minutes, cross-team email, one-page proposal, GRAI retrospective |
-| [`corpus/04-real/`](./references/corpus/04-real/) | Real outputs: filing rules, template, redaction limits |
-| [`corpus/05-walkthrough/`](./references/corpus/05-walkthrough/) | Three walkthroughs: monthly review, competitor brief, meeting minutes to actions (messy input), fictional data |
+| [`corpus/04-cases/`](./references/corpus/04-cases/) | Three full cases: monthly review (seven steps), competitor brief (two steps), meeting minutes to actions (messy input); fictional data |
 
 Use them by parts, not whole: copy the structure, rewrite the phrasing, replace every number.
 
@@ -206,7 +205,7 @@ Supported apps include WorkBuddy, CodeBuddy, TRAE (CN and international), Qoder 
 | `references/variants.md` | Six variants: three-step, weekly, retrospective, meeting, competitor, chat-only |
 | `references/scenarios.md` | Client-facing material, cross-team output, adapting to an industry |
 | `references/examples.md` | Three worked cases |
-| `references/corpus/` | Corpus: sources, skeletons, phrases, samples, real-output rules, a walkthrough |
+| `references/corpus/` | Corpus: sources, skeletons, phrases, short samples, three full cases |
 | `templates/` | Seven copy-paste prompt templates, plus an optional `pipeline-state.yaml` |
 | `examples/` | Six HTML samples, usable as templates |
 

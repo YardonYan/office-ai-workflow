@@ -2,6 +2,13 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.10.0 — 2026-11-03
+
+### Changed
+
+- The two case folders merged into one. `04-real` had been reserved for real submissions with a "waiting to be filled" slot; in practice most people cannot publish real material because it contains client names and internal numbers, so the slot would sit empty forever, which reads as a gap rather than a promise.
+- `corpus/04-cases/` now holds the three full cases under plain names: `01-monthly-review`, `02-competitor-brief`, `03-meeting-actions`. The optional template stays, for anyone who does want to contribute a redacted real one.
+
 ## 2.9.1 — 2026-11-03
 
 ### Changed
