@@ -1,28 +1,10 @@
+
+
 <div align="center">
 
-[中文](./README.md) · **English**
-
-# office-ai-workflow
-
-#### Design an office pipeline, then run it
-
-[![Version](https://img.shields.io/badge/version-2.9.0-green.svg)](SKILL.md)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
-[![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
-[![Steps](https://img.shields.io/badge/steps-7-D97706.svg)](#the-seven-steps)
+[Two ways in](#two-ways-in) · [Seven steps](#the-seven-steps) · [Quick start](#quick-start) · [Samples](#what-the-output-looks-like) · [Principles](#seven-operating-principles) · [Thinking](#five-ways-of-thinking) · [Maturity](#maturity-and-governance) · [Design](#designing-your-own-pipeline) · [Write it down](#writing-it-down-for-other-people) · [Templates](#templates) · [Contracts](#output-contracts) · [Corpus](#corpus) · [Install](#install) · [Contents](#what's-inside)
 
 </div>
-
-<p align="center">
-  <img src="./assets/cover.svg" width="100%" alt="office-ai-workflow: a seven-step office pipeline">
-</p>
-
----
-
-> Stop treating the assistant as a chat window. Chain the scattered office work into one line: brief each step properly, let each output feed the next, and have a person check only the numbers and the conclusion.
-
-This skill does two things: **design a pipeline for a recurring kind of work**, and **run one task through an existing pipeline**.
 
 ## Two ways in
 
@@ -55,77 +37,6 @@ Two steps at the ends, five in the middle. The end steps are the ones people ski
 
 The step count is not fixed. Three steps is fine if that is what your task has; nine is fine too. The only test: **is this step's input, risk and definition of done genuinely different from the next one.**
 
-## Designing your own pipeline
-
-Seven moves, for people who do not know where to start.
-
-| Move | The judgement that matters |
-|---|---|
-| 1. Find the repetition | Start with the one you dread most each week |
-| 2. Decide if it deserves a pipeline | Still doing it next month, over half an hour, inconsistent results — two of three |
-| 3. Split on decisions, not on files | Split where input, risk or done-criteria differ |
-| 4. Write the contract per step | The done-criterion must be answerable yes or no |
-| 5. Chain it, check the handoffs | If you cannot name the artifact between two steps, merge them |
-| 6. Run one real task through it | Watch where it stalls and which output the next step cannot use |
-| 7. Fix and freeze | Prompts become templates, outputs become samples, boundaries get written |
-
-Full version with six common traps and three fix patterns: [`references/design.md`](./references/design.md).
-
-## Writing it down for other people
-
-A pipeline only you can run is not a pipeline. Eight sections when you share it:
-
-purpose (including **what it does not do**) · when to use · inputs (including **what counts as bad input**) · output contract · guardrails · examples · how to run · changelog.
-
-The two most-skipped sections are the output contract and the bad-input note. They are also the two that decide whether anyone else can use it. Details: [`references/sharing.md`](./references/sharing.md).
-
-## Seven operating principles
-
-More important than memorising the seven steps. Scenarios vary; the principles do not.
-
-| # | Principle | In one line |
-|---|---|---|
-| 1 | Classify before acting | One-off or a pipeline, what form is the deliverable, what material exists — answer all three first |
-| 2 | Route by deliverable, not by name | The same request name can hide two paths; look at what ships, not what it is called |
-| 3 | Compose, do not enumerate | The seven steps are a standard composition, not the only one |
-| 4 | Types must connect | Each step's output has a type; the next step can only consume a matching one. A gap means a missing step |
-| 5 | Define once | Handoff rules are defined in one place and referenced elsewhere; duplicated definitions drift |
-| 6 | Intermediates stay internal | Briefs, lists, tables and diagrams are intermediate: give a path and a one-line summary, not a polished deliverable |
-| 7 | One line of provenance per step | Not a tick box: what was checked and what was concluded |
-
-Some work looks like office work but should not go through a pipeline. The test: if it needs one decision or one action, skip the pipeline. Pipelines exist for multiple handoffs, multiple people, and a record.
-
-## Maturity and governance
-
-Building the pipeline is the start. You also need to know what level it sits at and whether it can fail safely.
-
-| Level | Name | Test |
-|---|---|---|
-| L1 | Assisted generation | A person drives, the assistant drafts |
-| L2 | Controlled automation | Fixed steps, fixed artifacts, a person only checks (the seven steps live here) |
-| L3 | Autonomous execution | Triggered by signals, only escalates on exceptions |
-| L4 | Self-optimising | Spots its own redundancy and proposes removal |
-
-Most office work stops at L2. Going up needs three things, none of them tools: a trigger, a pass/fail criterion, and an exception exit.
-
-Governance is four questions: who enables it, who is isolated from whom, who hears about overreach, and who signs off. The last one is the most skipped — **an assistant saying it is done does not make it done.**
-
-Details: [`references/maturity.md`](./references/maturity.md).
-
-## Templates
-
-Seven copy-paste prompts under `templates/`. Each carries inputs, the prompt, an output contract, an acceptance list and failure handling.
-
-| Template | Use it when |
-|---|---|
-| [`00-define.md`](./templates/00-define.md) | Defining the boundary before starting |
-| [`01-brief.md`](./templates/01-brief.md) | Scattered information into a one-page brief |
-| [`02-extract.md`](./templates/02-extract.md) | Long documents into an action list |
-| [`03-map.md`](./templates/03-map.md) | A multi-step process into a diagram |
-| [`04-stats.md`](./templates/04-stats.md) | A ledger into a stats table |
-| [`05-report.md`](./templates/05-report.md) | Materials ready, need a deck outline |
-| [`06-weekly.md`](./templates/06-weekly.md) | The weekly report, three-step variant |
-
 ## Quick start
 
 Send this to your assistant:
@@ -151,6 +62,107 @@ Six single-file HTML pages. Open one and you are looking at a finished deliverab
 | <a href="https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html"><img src="./assets/samples/monthly-review.png" width="330" alt="月度复盘"></a><br><sub><b>月度复盘</b> · 五页骨架，数据与口径</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/index.html"><img src="./assets/samples/index.png" width="330" alt="示例目录"></a><br><sub><b>示例目录</b> · 全部示例的入口页</sub> |
 
 All single-file, dependency-free, print-friendly.
+
+## Seven operating principles
+
+More important than memorising the seven steps. Scenarios vary; the principles do not.
+
+| # | Principle | In one line |
+|---|---|---|
+| 1 | Classify before acting | One-off or a pipeline, what form is the deliverable, what material exists — answer all three first |
+| 2 | Route by deliverable, not by name | The same request name can hide two paths; look at what ships, not what it is called |
+| 3 | Compose, do not enumerate | The seven steps are a standard composition, not the only one |
+| 4 | Types must connect | Each step's output has a type; the next step can only consume a matching one. A gap means a missing step |
+| 5 | Define once | Handoff rules are defined in one place and referenced elsewhere; duplicated definitions drift |
+| 6 | Intermediates stay internal | Briefs, lists, tables and diagrams are intermediate: give a path and a one-line summary, not a polished deliverable |
+| 7 | One line of provenance per step | Not a tick box: what was checked and what was concluded |
+
+Some work looks like office work but should not go through a pipeline. The test: if it needs one decision or one action, skip the pipeline. Pipelines exist for multiple handoffs, multiple people, and a record.
+
+## Five ways of thinking
+
+The seven steps set the order; this section sets how to think. Five prompts, each a mature method — say one and the mode switches.
+
+| Method | In one line | Use it when |
+|---|---|---|
+| First principles | Stop optimising the current plan; re-ask what this is for | You suspect the task itself is framed wrong |
+| Adversarial review | Do not justify it; find counterexamples that break the core assumption | Before a proposal is final, before a deck ships |
+| Ablation | Remove one change at a time and see where the gain really came from | You made several changes at once |
+| Occam's razor | Remove every step that is not necessary | The pipeline keeps growing |
+| Boundary check | Is the responsibility split clean, should this be two documents | Structure is muddled, too many people involved |
+
+Chained, they map to five cognitive moves: reframe the problem, attack the assumption, verify the contribution, delete complexity, tidy the boundaries.
+
+Details and office-scenario examples: [`references/mindset.md`](./references/mindset.md).
+
+## Maturity and governance
+
+Building the pipeline is the start. You also need to know what level it sits at and whether it can fail safely.
+
+| Level | Name | Test |
+|---|---|---|
+| L1 | Assisted generation | A person drives, the assistant drafts |
+| L2 | Controlled automation | Fixed steps, fixed artifacts, a person only checks (the seven steps live here) |
+| L3 | Autonomous execution | Triggered by signals, only escalates on exceptions |
+| L4 | Self-optimising | Spots its own redundancy and proposes removal |
+
+Most office work stops at L2. Going up needs three things, none of them tools: a trigger, a pass/fail criterion, and an exception exit.
+
+Governance is four questions: who enables it, who is isolated from whom, who hears about overreach, and who signs off. The last one is the most skipped — **an assistant saying it is done does not make it done.**
+
+Details: [`references/maturity.md`](./references/maturity.md).
+
+## Designing your own pipeline
+
+Seven moves, for people who do not know where to start.
+
+| Move | The judgement that matters |
+|---|---|
+| 1. Find the repetition | Start with the one you dread most each week |
+| 2. Decide if it deserves a pipeline | Still doing it next month, over half an hour, inconsistent results — two of three |
+| 3. Split on decisions, not on files | Split where input, risk or done-criteria differ |
+| 4. Write the contract per step | The done-criterion must be answerable yes or no |
+| 5. Chain it, check the handoffs | If you cannot name the artifact between two steps, merge them |
+| 6. Run one real task through it | Watch where it stalls and which output the next step cannot use |
+| 7. Fix and freeze | Prompts become templates, outputs become samples, boundaries get written |
+
+Full version with six common traps and three fix patterns: [`references/design.md`](./references/design.md).
+
+## Writing it down for other people
+
+A pipeline only you can run is not a pipeline. Eight sections when you share it:
+
+purpose (including **what it does not do**) · when to use · inputs (including **what counts as bad input**) · output contract · guardrails · examples · how to run · changelog.
+
+The two most-skipped sections are the output contract and the bad-input note. They are also the two that decide whether anyone else can use it. Details: [`references/sharing.md`](./references/sharing.md).
+
+## Templates
+
+Seven copy-paste prompts under `templates/`. Each carries inputs, the prompt, an output contract, an acceptance list and failure handling.
+
+| Template | Use it when |
+|---|---|
+| [`00-define.md`](./templates/00-define.md) | Defining the boundary before starting |
+| [`01-brief.md`](./templates/01-brief.md) | Scattered information into a one-page brief |
+| [`02-extract.md`](./templates/02-extract.md) | Long documents into an action list |
+| [`03-map.md`](./templates/03-map.md) | A multi-step process into a diagram |
+| [`04-stats.md`](./templates/04-stats.md) | A ledger into a stats table |
+| [`05-report.md`](./templates/05-report.md) | Materials ready, need a deck outline |
+| [`06-weekly.md`](./templates/06-weekly.md) | The weekly report, three-step variant |
+
+## Output contracts
+
+Fix what each step produces before you start. Checking against it afterwards is cheaper than rework.
+
+| Step | Artifact | Hard requirement |
+|---|---|---|
+| 0 | Task card | All four questions answered, including what you will not do |
+| 1 | Brief | Three columns, four rows max, every row traceable |
+| 2 | Action list | Items start with a verb, owners never invented |
+| 3 | Flow | Parallel work not drawn as sequential, review gates kept |
+| 4 | Stats table | Categories sum to the total, formula written below |
+| 5 | Deck outline | One conclusion per slide, titles are conclusions |
+| 6 | Review record | Three sampled numbers, one definition, one conclusion, written down |
 
 ## Corpus
 
@@ -218,3 +230,4 @@ Templates and scenario variants are welcome. See [`CONTRIBUTING.md`](./CONTRIBUT
 ## License
 
 [Apache-2.0](./LICENSE), `Copyright 2026 YardonYan`.
+

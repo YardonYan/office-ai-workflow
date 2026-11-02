@@ -2,6 +2,14 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.9.1 — 2026-11-03
+
+### Changed
+
+- README rebuilt around a navigation bar and a task-oriented order: what it is, the seven steps, a thirty-second start, the samples, then principles and methods, then reference material. Eighteen sections in both languages, previously out of step.
+- English README gained the two sections it was missing (thinking methods, output contracts) and now mirrors the Chinese one section for section.
+- The contents table now separates the corpus layers: short samples, three full walkthroughs, and the real-output folder still waiting to be filled.
+
 ## 2.9.0 — 2026-11-03
 
 ### Added

@@ -6,7 +6,7 @@
 
 #### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-2.9.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.9.1-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
@@ -24,6 +24,12 @@
 > 别把 AI 当问答窗口。把零散办公活接成一条线：每步交代清楚，上一步的产物是下一步的原料，人只核对关键数字和结论。
 
 这份 Skill 管两件事：**把一类活设计成流程**，和**按现成的流程把一次活干完**。
+
+<div align="center">
+
+[两种用法](#两种用法) · [七步](#七步) · [三十秒上手](#三十秒上手) · [成品示例](#成品长什么样) · [编排原则](#七条编排原则) · [思考方式](#五种思考方式) · [成熟度](#成熟度与治理) · [自己设计](#怎么设计自己的工作流) · [写成文档](#写成别人能用的文档) · [模板](#模板) · [输出契约](#输出契约) · [语料](#语料) · [安装](#安装) · [内含](#内含)
+
+</div>
 
 ## 两种用法
 
@@ -56,29 +62,31 @@
 
 步骤数不是死的。你的场景只有三步就写三步，有九步就写九步。判据只有一条：**这一步的输入、风险、完成标准，和下一步是否真的不同。**
 
-## 怎么设计自己的工作流
+## 三十秒上手
 
-给不知道怎么下笔的人。七个动作：
+把这句话发给 AI：
 
-| 动作 | 关键判断 |
+```
+用 office-ai-workflow，帮我把这几个文件整理成本月复盘。
+重点是客户反馈和进度卡点，输出简报 + 行动清单 + 统计表 + PPT 大纲，
+数字必须保留原始依据，不要臆造。
+```
+
+它会拆成几步做，每步停下来给你过检查清单，再进下一步。
+
+## 成品长什么样
+
+六份单文件 HTML，点开即看。既是示例，也是模板：复制过去替换内容，就是你的初稿。
+
+<p align="center"><sub>在线预览 · <a href="https://yardonyan.github.io/office-ai-workflow/examples/">yardonyan.github.io/office-ai-workflow/examples</a></sub></p>
+
+| | |
 |---|---|
-| 一、找重复 | 每天每周最烦的那件事，先做它 |
-| 二、判断值不值得 | 下个月还做、超过半小时、每次做法不一样，中两个才值得 |
-| 三、拆成决策点 | 按输入、风险、完成标准拆，不按文件大小拆 |
-| 四、定输入输出契约 | 完成标准要能判断是或否 |
-| 五、串成骨架 | 每两步之间必须能写出一个实体名词 |
-| 六、拿真事跑一遍 | 看哪一步卡住、哪一步的产物下一步用不上 |
-| 七、固化 | 提示词变模板、产物存样例、写清不适用范围 |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html"><img src="./assets/samples/research-brief.png" width="330" alt="信息简报"></a><br><sub><b>信息简报</b> · 三列结构，结尾一个建议动作</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/action-list.html"><img src="./assets/samples/action-list.png" width="330" alt="行动清单"></a><br><sub><b>行动清单</b> · 五要素提取，负责人缺失怎么标</sub> |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/weekly.html"><img src="./assets/samples/weekly.png" width="330" alt="周报"></a><br><sub><b>周报</b> · 三段式，四百字以内</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/minutes.html"><img src="./assets/samples/minutes.png" width="330" alt="会议纪要"></a><br><sub><b>会议纪要</b> · 五段结构，待办四列</sub> |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html"><img src="./assets/samples/monthly-review.png" width="330" alt="月度复盘"></a><br><sub><b>月度复盘</b> · 五页骨架，数据与口径</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/index.html"><img src="./assets/samples/index.png" width="330" alt="示例目录"></a><br><sub><b>示例目录</b> · 全部示例的入口页</sub> |
 
-完整版含六个常见陷阱和三个断点修法，见 [`references/design.md`](./references/design.md)。
-
-## 写成别人能用的文档
-
-流程设计完，只有自己会用等于没有。分享时按八段写：
-
-用途（含**不做什么**）· 什么时候用 · 输入（含**什么算坏输入**）· 输出契约 · 护栏 · 示例 · 运行说明 · 变更记录
-
-最容易被跳过的是输出契约和坏输入说明，这两样恰恰决定别人能不能用起来。写法见 [`references/sharing.md`](./references/sharing.md)。
+全部单文件、无外部依赖、打印友好。配色和排版可以直接复用，也可以按你的品牌改。
 
 ## 七条编排原则
 
@@ -129,6 +137,30 @@
 
 细节见 [`references/maturity.md`](./references/maturity.md)。
 
+## 怎么设计自己的工作流
+
+给不知道怎么下笔的人。七个动作：
+
+| 动作 | 关键判断 |
+|---|---|
+| 一、找重复 | 每天每周最烦的那件事，先做它 |
+| 二、判断值不值得 | 下个月还做、超过半小时、每次做法不一样，中两个才值得 |
+| 三、拆成决策点 | 按输入、风险、完成标准拆，不按文件大小拆 |
+| 四、定输入输出契约 | 完成标准要能判断是或否 |
+| 五、串成骨架 | 每两步之间必须能写出一个实体名词 |
+| 六、拿真事跑一遍 | 看哪一步卡住、哪一步的产物下一步用不上 |
+| 七、固化 | 提示词变模板、产物存样例、写清不适用范围 |
+
+完整版含六个常见陷阱和三个断点修法，见 [`references/design.md`](./references/design.md)。
+
+## 写成别人能用的文档
+
+流程设计完，只有自己会用等于没有。分享时按八段写：
+
+用途（含**不做什么**）· 什么时候用 · 输入（含**什么算坏输入**）· 输出契约 · 护栏 · 示例 · 运行说明 · 变更记录
+
+最容易被跳过的是输出契约和坏输入说明，这两样恰恰决定别人能不能用起来。写法见 [`references/sharing.md`](./references/sharing.md)。
+
 ## 模板
 
 `templates/` 下七份，复制就能用。每份含输入说明、提示词原文、输出契约、验收清单、失败处理。
@@ -156,32 +188,6 @@
 | 4 | 统计表 | 分类合计等于总数，公式写在表下 |
 | 5 | 汇报大纲 | 每页一个结论，标题是结论句 |
 | 6 | 核对记录 | 三处数字、口径、结论逐条写明 |
-
-## 三十秒上手
-
-把这句话发给 AI：
-
-```
-用 office-ai-workflow，帮我把这几个文件整理成本月复盘。
-重点是客户反馈和进度卡点，输出简报 + 行动清单 + 统计表 + PPT 大纲，
-数字必须保留原始依据，不要臆造。
-```
-
-它会拆成几步做，每步停下来给你过检查清单，再进下一步。
-
-## 成品长什么样
-
-六份单文件 HTML，点开即看。既是示例，也是模板：复制过去替换内容，就是你的初稿。
-
-<p align="center"><sub>在线预览 · <a href="https://yardonyan.github.io/office-ai-workflow/examples/">yardonyan.github.io/office-ai-workflow/examples</a></sub></p>
-
-| | |
-|---|---|
-| <a href="https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html"><img src="./assets/samples/research-brief.png" width="330" alt="信息简报"></a><br><sub><b>信息简报</b> · 三列结构，结尾一个建议动作</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/action-list.html"><img src="./assets/samples/action-list.png" width="330" alt="行动清单"></a><br><sub><b>行动清单</b> · 五要素提取，负责人缺失怎么标</sub> |
-| <a href="https://yardonyan.github.io/office-ai-workflow/examples/weekly.html"><img src="./assets/samples/weekly.png" width="330" alt="周报"></a><br><sub><b>周报</b> · 三段式，四百字以内</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/minutes.html"><img src="./assets/samples/minutes.png" width="330" alt="会议纪要"></a><br><sub><b>会议纪要</b> · 五段结构，待办四列</sub> |
-| <a href="https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html"><img src="./assets/samples/monthly-review.png" width="330" alt="月度复盘"></a><br><sub><b>月度复盘</b> · 五页骨架，数据与口径</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/index.html"><img src="./assets/samples/index.png" width="330" alt="示例目录"></a><br><sub><b>示例目录</b> · 全部示例的入口页</sub> |
-
-全部单文件、无外部依赖、打印友好。配色和排版可以直接复用，也可以按你的品牌改。
 
 ## 语料
 
@@ -244,7 +250,9 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/variants.md` | 六种变体：三步精简、周报、复盘、会议、竞品、纯对话 |
 | `references/scenarios.md` | 客户材料、跨部门、行业流程改造 |
 | `references/examples.md` | 三个完整案例 |
-| `references/corpus/` | 语料：来源、六种骨架、措辞库、六篇范文、真实产出规范、完整走查 |
+| `references/corpus/` | 语料：来源、六种文档骨架、措辞库、六篇短文范文 |
+| `references/corpus/05-walkthrough/` | 三份完整走查：月度复盘、竞品简报、会议转行动 |
+| `references/corpus/04-real/` | 真实产出的收录规范与模板（待填） |
 | `templates/` | 七份提示词模板，加 `pipeline-state.yaml` 与 `rules.json` |
 | `examples/` | 六份 HTML 成品，可当模板用 |
 
@@ -268,3 +276,4 @@ node tools/install.mjs --ai all        # 一次装到全部
 ## 许可
 
 [Apache-2.0](./LICENSE)，版权行 `Copyright 2026 YardonYan`。
+
