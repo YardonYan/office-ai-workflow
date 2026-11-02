@@ -44,6 +44,40 @@ def t(x, y, body, size, fill, *, weight=400, font=SANS, anchor=None,
     return f'<text {" ".join(a)}>{body}</text>'
 
 
+def icon(idx: int, cx: float, cy: float) -> str:
+    """七个工位的小图标，统一 22x22 以内。"""
+    def a(w=1.5, op=None):
+        base = f'stroke="{GREEN}" stroke-width="{w}" fill="none" stroke-linecap="round"'
+        if op:
+            base += f' stroke-opacity="{op}"'
+        return base
+
+    if idx == 0:
+        return (f'<rect x="{cx - 10}" y="{cy - 10}" width="20" height="20" rx="3" {a()}/>'
+                f'<path d="M{cx - 5} {cy} l3.5 3.5 l6.5 -7" {a()}/>')
+    if idx == 1:
+        return (f'<circle cx="{cx - 2}" cy="{cy - 2}" r="7.5" {a()}/>'
+                f'<line x1="{cx + 4}" y1="{cy + 4}" x2="{cx + 10}" y2="{cy + 10}" {a()}/>')
+    if idx == 2:
+        return (f'<rect x="{cx - 8}" y="{cy - 11}" width="16" height="22" rx="2" {a()}/>'
+                f'<line x1="{cx - 4}" y1="{cy - 4}" x2="{cx + 4}" y2="{cy - 4}" {a(1.2, ".55")}/>'
+                f'<line x1="{cx - 4}" y1="{cy + 1}" x2="{cx + 4}" y2="{cy + 1}" {a(1.2, ".55")}/>'
+                f'<line x1="{cx - 4}" y1="{cy + 6}" x2="{cx + 1}" y2="{cy + 6}" {a(1.2, ".55")}/>')
+    if idx == 3:
+        return (f'<rect x="{cx - 11}" y="{cy - 10}" width="9" height="7" rx="1.5" {a()}/>'
+                f'<rect x="{cx + 2}" y="{cy + 3}" width="9" height="7" rx="1.5" {a()}/>'
+                f'<path d="M{cx - 6} {cy - 3} V{cy} H{cx + 6} V{cy + 3}" {a(1.3)}/>')
+    if idx == 4:
+        return (f'<rect x="{cx - 10}" y="{cy - 9}" width="20" height="18" rx="2" {a()}/>'
+                f'<line x1="{cx - 10}" y1="{cy - 3}" x2="{cx + 10}" y2="{cy - 3}" {a(1.2)}/>'
+                f'<line x1="{cx - 3}" y1="{cy - 9}" x2="{cx - 3}" y2="{cy + 9}" {a(1.2)}/>')
+    if idx == 5:
+        return (f'<rect x="{cx - 10}" y="{cy - 9}" width="20" height="18" rx="2" {a()}/>'
+                f'<path d="M{cx - 6} {cy + 4} l5 -6 l4 4 l5 -7" {a(1.5)}/>')
+    return (f'<path d="M{cx - 9} {cy} l4.5 5 l8 -10" {a(1.8)}/>'
+            f'<line x1="{cx - 10}" y1="{cy + 8}" x2="{cx + 10}" y2="{cy + 8}" {a(1.2, ".5")}/>')
+
+
 def cover() -> str:
     s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
          f'viewBox="0 0 {W} {H}" role="img" aria-label="office-ai-workflow">',
@@ -195,6 +229,102 @@ def pipeline() -> str:
                anchor="middle"))
 
     s.append(t(40, 208, "缺哪步跳哪步，但已走步骤的顺序不乱、交接物不省。",
+               10.5, FAINT))
+    s.append("</svg>")
+    return "\n".join(s)
+
+
+def cover() -> str:
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
+         f'viewBox="0 0 {W} {H}" role="img" aria-label="office-ai-workflow">',
+         f'<rect width="{W}" height="{H}" fill="{BG}"/>']
+
+    s.append(t(60, 58, "office-ai-workflow", 24, INK, weight=600))
+    s.append(t(60, 84, "办公工作流的设计与实现", 13.5, MUTED))
+    s.append(t(60, 103, "Design a pipeline, then run it", 10, FAINT))
+    s.append(f'<line x1="620" y1="46" x2="840" y2="46" stroke="{LINE}" '
+             f'stroke-width="1"/>')
+    s.append(t(840, 40, "AGENT SKILL · APACHE-2.0", 9, FAINT, font=MONO,
+               anchor="end", spacing=1))
+
+    steps = [
+        ("0", "定义", "任务卡"),
+        ("1", "查资料", "简报"),
+        ("2", "读文件", "清单"),
+        ("3", "理流程", "流程图"),
+        ("4", "做表格", "统计表"),
+        ("5", "写汇报", "初稿"),
+        ("6", "复核", "核对记录"),
+    ]
+
+    bw, bh, gap = 104, 108, 16
+    total = len(steps) * bw + (len(steps) - 1) * gap
+    x0 = (W - total) / 2
+    top = 158
+
+    s.append(f'<rect x="{x0 - 22}" y="{top + bh - 5}" width="{total + 44}" '
+             f'height="3" rx="1.5" fill="{LINE}"/>')
+
+    for i, (num, name, out) in enumerate(steps):
+        x = x0 + i * (bw + gap)
+        s.append(f'<rect x="{x}" y="{top}" width="{bw}" height="{bh}" rx="6" '
+                 f'fill="#FFFFFF" stroke="{LINE}" stroke-width="1.2"/>')
+        s.append(f'<rect x="{x}" y="{top}" width="{bw}" height="3.5" rx="1.75" '
+                 f'fill="{GREEN}" fill-opacity="{0.3 + i * 0.1:.2f}"/>')
+        s.append(t(x + 12, top + 24, num, 9, FAINT, font=MONO, spacing=1.2))
+        s.append(t(x + 12, top + 43, name, 13, INK, weight=600))
+        s.append(icon(i, x + bw / 2, top + 76))
+
+        s.append(t(x + bw / 2, top + bh + 24, out, 10, CLAY, anchor="middle"))
+
+        if i < len(steps) - 1:
+            ax = x + bw + gap / 2
+            s.append(f'<path d="M{ax - 4} {top + 52} h7 m-3 -2.6 l3 2.6 l-3 2.6" '
+                     f'fill="none" stroke="{FAINT}" stroke-width="1.2" '
+                     f'stroke-linecap="round" stroke-linejoin="round"/>')
+
+    s.append(t(60, 316, "两端是定义与复核，中间五步是主体。上一步的产出是下一步的原料。",
+               10.5, FAINT))
+    s.append("</svg>")
+    return "\n".join(s)
+
+
+def pipeline() -> str:
+    w, h = 900, 212
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
+         f'viewBox="0 0 {w} {h}" role="img" aria-label="七步与交接物">',
+         f'<rect width="{w}" height="{h}" fill="#FFFFFF"/>']
+    s.append(t(40, 36, "七步与交接物", 15, INK, weight=600))
+    s.append(t(40, 56, "每一步都留下实体产物，下一步拿它当原料", 10.5, MUTED))
+
+    steps = [("定义", "任务卡"), ("查资料", "信息简报"), ("读文件", "行动清单"),
+             ("理流程", "流程图"), ("做表格", "统计表"), ("写汇报", "初稿"),
+             ("复核", "核对记录")]
+    bw, gap, y = 100, 20, 94
+    total = len(steps) * bw + (len(steps) - 1) * gap
+    x0 = (w - total) / 2
+
+    for i, (name, out) in enumerate(steps):
+        x = x0 + i * (bw + gap)
+        s.append(f'<rect x="{x}" y="{y}" width="{bw}" height="42" rx="6" '
+                 f'fill="{GREEN_L}" stroke="{GREEN}" stroke-width="1"/>')
+        s.append(t(x + bw / 2, y + 26, name, 11.5, GREEN, weight=600,
+                   anchor="middle"))
+        s.append(f'<line x1="{x + bw / 2}" y1="{y + 42}" x2="{x + bw / 2}" '
+                 f'y2="{y + 60}" stroke="{CLAY}" stroke-width="1.2" '
+                 f'stroke-dasharray="3 3"/>')
+        s.append(f'<rect x="{x + 8}" y="{y + 60}" width="{bw - 16}" '
+                 f'height="22" rx="4" fill="#FFFFFF" stroke="{CLAY}" '
+                 f'stroke-width="1" stroke-opacity=".5"/>')
+        s.append(t(x + bw / 2, y + 75, out, 9, CLAY, anchor="middle"))
+
+        if i < len(steps) - 1:
+            ax = x + bw + gap / 2
+            s.append(f'<path d="M{ax - 6} {y + 21} h12 m-4 -3.4 l4 3.4 l-4 3.4" '
+                     f'fill="none" stroke="{FAINT}" stroke-width="1.3" '
+                     f'stroke-linecap="round" stroke-linejoin="round"/>')
+
+    s.append(t(40, 206, "缺哪步跳哪步，但已走步骤的顺序不乱、交接物不省。",
                10.5, FAINT))
     s.append("</svg>")
     return "\n".join(s)

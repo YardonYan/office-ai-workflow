@@ -2,6 +2,21 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.0.0 — 2026-11-02
+
+### Changed
+
+- The skill is now about **designing** a pipeline, not only running one. The main file gained a seven-move design section, a section on fixing an existing pipeline, and a section on documenting a pipeline for other people.
+- Steps grew from five to seven: a definition step at the front and a review step at the end. The middle five are unchanged.
+- The step count is no longer fixed. The main file states the only test for splitting: whether input, risk and definition-of-done genuinely differ.
+- README and both figures rebuilt around seven steps.
+
+### Added
+
+- `references/design.md` — the full design method, with six traps and three fix patterns.
+- `references/sharing.md` — the eight-section documentation pattern, three formats, and a pre-publish checklist.
+- `templates/00-define.md` — the task-card template for step zero.
+
 ## 1.1.0 — 2026-11-02
 
 ### Added

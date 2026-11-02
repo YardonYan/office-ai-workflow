@@ -4,53 +4,94 @@
 
 # office-ai-workflow
 
-#### Five recurring office tasks, chained into one pipeline
+#### Design an office pipeline, then run it
 
-[![Version](https://img.shields.io/badge/version-1.1.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
+[![Steps](https://img.shields.io/badge/steps-7-D97706.svg)](#the-seven-steps)
 
 </div>
 
 <p align="center">
-  <img src="./assets/cover.svg" width="100%" alt="office-ai-workflow: five workstations on one line">
+  <img src="./assets/cover.svg" width="100%" alt="office-ai-workflow: a seven-step office pipeline">
 </p>
 
 ---
 
-> Research, read, map, tabulate, report. None of the five is hard on its own; chaining them is what saves time.
-> Each step's output is the next step's input, and a person only checks the numbers and the conclusion.
+> Stop treating the assistant as a chat window. Chain the scattered office work into one line: brief each step properly, let each output feed the next, and have a person check only the numbers and the conclusion.
 
-One skill, one five-step pipeline. No scripts, no network, no packages. Drop the folder into your agent's skills directory and it runs.
+This skill does two things: **design a pipeline for a recurring kind of work**, and **run one task through an existing pipeline**.
 
-## Why a pipeline
+## Two ways in
 
-Using an assistant for one-off office tasks has three recurring failures:
-
-| Failure | Cost |
+| Your situation | Start here |
 |---|---|
-| Close the window and start over | Formatting and wording decisions are lost |
-| Re-explain the task every time | Vague briefs in, uneven output out |
-| Intermediate artifacts are not kept | The numbers in the final deck do not reconcile |
+| One concrete task to finish efficiently | Go straight to the seven steps |
+| A recurring kind of work you keep rethinking from scratch | Read "Designing your own pipeline" first |
+| A pipeline that keeps stalling at one step | Read "Fixing an existing pipeline" |
+| A pipeline you want others to use | Read "Writing it down for other people" |
 
-The pipeline fixes the order and the handoffs: research feeds reading, reading feeds the action list, and the list plus the numbers land in the report. The method stays; only the inputs change.
+Most people are stuck on the second one: they know AI should help here, but do not know how to start. That section is the point of this repo.
 
-## The five steps
+## The seven steps
+
+Two steps at the ends, five in the middle. The end steps are the ones people skip, and the ones that decide whether the rest works.
 
 <p align="center">
-  <img src="./assets/pipeline.svg" width="100%" alt="Five steps and their handoffs: brief, action list, flow, stats table, draft deck, then human review">
+  <img src="./assets/pipeline.svg" width="100%" alt="Seven steps and their handoffs: task card, brief, action list, flow, stats table, draft deck, review record">
 </p>
 
-| Step | What happens | What it hands over |
-|---|---|---|
-| 1 | Research: bound the topic and the date range, produce a one-page brief | Brief (point / source / relevance) |
-| 2 | Read: extract long documents by five fields, never paraphrase the whole thing | Action list (item / owner / due / source) |
-| 3 | Map: turn the process into a flow or a responsibility chart | Flow with human review gates marked |
-| 4 | Tabulate: unify the schema first, then aggregate, and state the formula | Stats table you can re-check |
-| 5 | Report: five-slide skeleton, one conclusion per slide | Draft deck for human review |
+| # | Step | Hands over | In one line |
+|---|---|---|---|
+| 0 | Define | Task card | Goal, scope, output contract, written before you start |
+| 1 | Research | Brief | Bound the range, compress into three columns you can act on |
+| 2 | Read | Action list | Extract five fields, never paraphrase the whole document |
+| 3 | Map | Flow | Mark parallel work, review gates and handoffs |
+| 4 | Tabulate | Stats table | Lock the definition first, write the formula down |
+| 5 | Report | Draft deck | One conclusion per slide, numbers quoted from the table |
+| 6 | Review | Review record | Numbers, definitions and conclusions all reconcile |
 
-You do not have to run all five. Skip what the task does not need, but keep the order of the steps you do run and never skip a handoff.
+The step count is not fixed. Three steps is fine if that is what your task has; nine is fine too. The only test: **is this step's input, risk and definition of done genuinely different from the next one.**
+
+## Designing your own pipeline
+
+Seven moves, for people who do not know where to start.
+
+| Move | The judgement that matters |
+|---|---|
+| 1. Find the repetition | Start with the one you dread most each week |
+| 2. Decide if it deserves a pipeline | Still doing it next month, over half an hour, inconsistent results — two of three |
+| 3. Split on decisions, not on files | Split where input, risk or done-criteria differ |
+| 4. Write the contract per step | The done-criterion must be answerable yes or no |
+| 5. Chain it, check the handoffs | If you cannot name the artifact between two steps, merge them |
+| 6. Run one real task through it | Watch where it stalls and which output the next step cannot use |
+| 7. Fix and freeze | Prompts become templates, outputs become samples, boundaries get written |
+
+Full version with six common traps and three fix patterns: [`references/design.md`](./references/design.md).
+
+## Writing it down for other people
+
+A pipeline only you can run is not a pipeline. Eight sections when you share it:
+
+purpose (including **what it does not do**) · when to use · inputs (including **what counts as bad input**) · output contract · guardrails · examples · how to run · changelog.
+
+The two most-skipped sections are the output contract and the bad-input note. They are also the two that decide whether anyone else can use it. Details: [`references/sharing.md`](./references/sharing.md).
+
+## Templates
+
+Seven copy-paste prompts under `templates/`. Each carries inputs, the prompt, an output contract, an acceptance list and failure handling.
+
+| Template | Use it when |
+|---|---|
+| [`00-define.md`](./templates/00-define.md) | Defining the boundary before starting |
+| [`01-brief.md`](./templates/01-brief.md) | Scattered information into a one-page brief |
+| [`02-extract.md`](./templates/02-extract.md) | Long documents into an action list |
+| [`03-map.md`](./templates/03-map.md) | A multi-step process into a diagram |
+| [`04-stats.md`](./templates/04-stats.md) | A ledger into a stats table |
+| [`05-report.md`](./templates/05-report.md) | Materials ready, need a deck outline |
+| [`06-weekly.md`](./templates/06-weekly.md) | The weekly report, three-step variant |
 
 ## Quick start
 
@@ -59,84 +100,37 @@ Send this to your assistant:
 ```
 Use office-ai-workflow to turn these files into a monthly review.
 Focus on customer feedback and blockers. Output a brief, an action list,
-a stats table and a deck outline. Keep the original sources for every number.
+a stats table and a deck outline. Keep the original source for every number.
 ```
 
-It works the five steps one at a time and stops at each checklist before moving on.
+It works the steps one at a time and stops at each checklist before moving on.
 
 ## Install
 
 ```bash
 git clone https://github.com/YardonYan/office-ai-workflow.git
 cd office-ai-workflow
-node tools/install.mjs --list      # see which apps are on this machine
+node tools/install.mjs --list      # which apps are on this machine
 node tools/install.mjs --ai all    # install to all of them
 ```
 
 Zero dependencies, Node standard library only. Also supports `--dry-run`, `--force`, `--uninstall`, `--project` and `--dir`.
 
-Or copy the folder manually so that `<skills-dir>/office-ai-workflow/SKILL.md` exists.
-
-| App | Global directory |
-|---|---|
-| WorkBuddy | `~/.workbuddy/skills/` |
-| CodeBuddy | `~/.codebuddy/skills/` |
-| TRAE (CN) | `~/.trae-cn/skills/` |
-| TRAE | `~/.trae/skills/` |
-| Qoder (CN) | `~/.qoder-cn/skills/` |
-| Qoder | `~/.qoder/skills/` |
-| Qwen Code | `~/.qwen/skills/` |
-| Lingma | `~/.lingma/skills/` |
-| Kimi Code CLI | `~/.kimi/skills/` |
-| iFlow CLI | `~/.iflow/skills/` |
-| OpenClaw | `~/.openclaw/skills/` |
-| CodeArts Doer | `~/.codeartsdoer/skills/` |
-| Claude Code | `~/.claude/skills/` |
-| Codex CLI | `~/.codex/skills/` |
-| Cursor | `~/.cursor/skills/` |
-| Shared convention | `~/.agents/skills/` |
-
-Restart the app, or trigger a skills refresh, after installing.
+Supported apps include WorkBuddy, CodeBuddy, TRAE (CN and international), Qoder (CN and international), QoderWork, Qwen Code, Lingma, Kimi Code CLI, iFlow CLI, CodeArts Doer, OpenClaw, Claude Code, Codex CLI, Cursor and the shared `~/.agents/skills` convention. Run `--list` for the exact paths.
 
 ## What's inside
 
-The main file carries the order and the principles. Details live in four reference files, loaded only when needed.
-
 | File | Content |
 |---|---|
-| `SKILL.md` | Three reasons to split, the pipeline, four things to brief before starting, checkpoints, failure handling |
-| `references/why-and-how.md` | How others build pipelines: prompt chains, role relay, task orchestration, template-plus-variable; when splitting goes too far |
-| `references/steps-deep.md` | Per-step inputs, actions, output definition, checklist, common mistakes, failure handling |
-| `references/variants.md` | Six variants: three-step, weekly, monthly retrospective, meeting, competitor brief, chat-only |
-| `references/scenarios.md` | Three extensions: client-facing material, cross-team output, adapting the five steps to your industry |
-| `references/examples.md` | Three worked cases with real inputs, outputs and snags |
-| `templates/` | Six copy-paste prompt templates |
-| `CONTRIBUTING.md` | Read before proposing a template |
-
-## Templates
-
-Six copy-paste prompts under `templates/`. Each carries inputs, the prompt, an output contract, an acceptance list and failure handling.
-
-| Template | Use it when |
-|---|---|
-| [`01-brief.md`](./templates/01-brief.md) | Scattered information needs to become a one-page brief |
-| [`02-extract.md`](./templates/02-extract.md) | A long document needs to become an action list |
-| [`03-map.md`](./templates/03-map.md) | A multi-step process needs to become a diagram |
-| [`04-stats.md`](./templates/04-stats.md) | A ledger needs to become a stats table |
-| [`05-report.md`](./templates/05-report.md) | Materials are ready and you need a deck outline |
-| [`06-weekly.md`](./templates/06-weekly.md) | The weekly report, three-step variant |
-
-## Output contracts
-
-Fix what each step produces before you start. Checking against it afterwards is cheaper than rework.
-
-| Step | Artifact | Hard requirement |
-|---|---|---|
-| 1 | Brief | Three columns, four rows max, every row traceable |
-| 2 | Action list | Items start with a verb, owners never invented |
-| 3 | Flow | Parallel work not drawn as sequential, review gates kept |
-| 4 | Stats table | Categories sum to the total, formula written below |
-| 5 | Deck outline | One conclusion per slide, titles are conclusions |
+| `SKILL.md` | Main file: two ways in, seven steps, design moves, fixing, writing down, checkpoints, failure handling |
+| `references/design.md` | Designing from scratch: three starting points, observing a real run, six traps, a minimum viable pipeline |
+| `references/sharing.md` | Documenting it: eight sections, three formats, the first screen, upkeep |
+| `references/why-and-how.md` | How others build pipelines: four schools and what they share |
+| `references/steps-deep.md` | Per-step inputs, actions, output definition, checklist, common mistakes |
+| `references/variants.md` | Six variants: three-step, weekly, retrospective, meeting, competitor, chat-only |
+| `references/scenarios.md` | Client-facing material, cross-team output, adapting to an industry |
+| `references/examples.md` | Three worked cases |
+| `templates/` | Seven copy-paste prompt templates |
 
 ## Non-negotiables
 
@@ -149,9 +143,12 @@ Fix what each step produces before you start. Checking against it afterwards is 
 
 Built on the [Agent Skills](https://agentskills.io) open standard: one directory, one `SKILL.md`, frontmatter limited to the fields the spec allows. Any tool that reads the standard loads it without conversion.
 
-The skill itself needs no scripts, network or packages. The two files under `tools/` only install the skill and generate plugin manifests; deleting them does not break the skill.
+The skill needs no scripts, network or packages. Files under `tools/` only install the skill and generate assets and plugin manifests.
+
+## Contributing
+
+Templates and scenario variants are welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
 
 ## License
 
 [Apache-2.0](./LICENSE), `Copyright 2026 YardonYan`.
-

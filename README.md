@@ -4,56 +4,111 @@
 
 # office-ai-workflow
 
-#### 把五个高频办公任务串成一条流水线
+#### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-1.1.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
+[![Steps](https://img.shields.io/badge/steps-7-D97706.svg)](#七步)
 [![Platform](https://img.shields.io/badge/platform-WorkBuddy%20%C2%B7%20CodeBuddy%20%C2%B7%20TRAE%20%C2%B7%20Qoder%20%C2%B7%20Claude%20Code-orange.svg)](#安装)
 
 </div>
 
 <p align="center">
-  <img src="./assets/cover.svg" width="100%" alt="office-ai-workflow：五个工位串成一条流水线">
+  <img src="./assets/cover.svg" width="100%" alt="office-ai-workflow：七步办公流水线">
 </p>
 
 ---
 
-> 查资料、读文件、理流程、做表格、写汇报，五件事单看都不难，串起来才省时间。
-> 上一步的产出是下一步的原料，人只核对关键数字和最终结论。
+> 别把 AI 当问答窗口。把零散办公活接成一条线：每步交代清楚，上一步的产物是下一步的原料，人只核对关键数字和结论。
 
-一个 Skill，一条五步流水线。不依赖脚本、不联网、不装任何包，把文件夹丢进 AI 的技能目录就能用。
+这份 Skill 管两件事：**把一类活设计成流程**，和**按现成的流程把一次活干完**。
 
-## 解决什么问题
+## 两种用法
 
-单点用 AI 做办公任务，常见三个毛病：
-
-| 毛病 | 后果 |
+| 你的处境 | 从哪开始 |
 |---|---|
-| 问完就关窗口 | 下次重新交代背景，调好的格式和说法全丢 |
-| 每次重新描述需求 | 任务模糊、资料零散，结果时好时坏 |
-| 中间产物不留存 | 拼汇报时材料还是散的，数字口径对不上 |
+| 手上一件具体的活，想高效做完 | 直接走七步 |
+| 一类活反复出现，每次都要从头想 | 读「怎么设计自己的工作流」，设计完再执行 |
+| 已有流程但总卡在某一环 | 读「改造现有流程」，通常是缺交接物或口径没锁 |
+| 想把流程交给别人用 | 读「写成别人能用的文档」 |
 
-流水线把顺序和交接固定下来：查到的资料接着用来读文件，读出的要点进清单，清单和数字最后落进汇报。方法固定，每次只换输入。
+多数人卡在第二种：知道该用 AI，但不知道怎么下笔。这个仓的重点也在那一节。
 
-## 五步
+## 七步
+
+两端各加一步，中间五步是主体。两端那两步最容易被跳过，也最影响成败。
 
 <p align="center">
-  <img src="./assets/pipeline.svg" width="100%" alt="五步与交接物：查资料→信息简报、读文件→行动清单、理流程→流程图、做表格→统计表、写汇报→初稿，最后人工复核">
+  <img src="./assets/pipeline.svg" width="100%" alt="七步与交接物：定义→任务卡、查资料→简报、读文件→清单、理流程→流程图、做表格→统计表、写汇报→初稿、复核→核对记录">
 </p>
 
-| 步 | 做什么 | 交出什么 |
+| # | 步 | 交出什么 | 一句话 |
+|---|---|---|---|
+| 0 | 定义 | 任务卡 | 目标、范围、输出契约，三样写清再动手 |
+| 1 | 查资料 | 信息简报 | 限定范围，收成能拿去做判断的三列 |
+| 2 | 读文件 | 行动清单 | 五要素提取，不复述全文 |
+| 3 | 理流程 | 流程图 | 标出并行、审核节点和交接点 |
+| 4 | 做表格 | 统计表 | 先锁口径再算，公式写出来 |
+| 5 | 写汇报 | 初稿 | 每页一个结论，数字引自统计表 |
+| 6 | 复核 | 核对记录 | 数字、口径、结论三条对得上才交 |
+
+步骤数不是死的。你的场景只有三步就写三步，有九步就写九步。判据只有一条：**这一步的输入、风险、完成标准，和下一步是否真的不同。**
+
+## 怎么设计自己的工作流
+
+给不知道怎么下笔的人。七个动作：
+
+| 动作 | 关键判断 |
+|---|---|
+| 一、找重复 | 每天每周最烦的那件事，先做它 |
+| 二、判断值不值得 | 下个月还做、超过半小时、每次做法不一样，中两个才值得 |
+| 三、拆成决策点 | 按输入、风险、完成标准拆，不按文件大小拆 |
+| 四、定输入输出契约 | 完成标准要能判断是或否 |
+| 五、串成骨架 | 每两步之间必须能写出一个实体名词 |
+| 六、拿真事跑一遍 | 看哪一步卡住、哪一步的产物下一步用不上 |
+| 七、固化 | 提示词变模板、产物存样例、写清不适用范围 |
+
+完整版含六个常见陷阱和三个断点修法，见 [`references/design.md`](./references/design.md)。
+
+## 写成别人能用的文档
+
+流程设计完，只有自己会用等于没有。分享时按八段写：
+
+用途（含**不做什么**）· 什么时候用 · 输入（含**什么算坏输入**）· 输出契约 · 护栏 · 示例 · 运行说明 · 变更记录
+
+最容易被跳过的是输出契约和坏输入说明，这两样恰恰决定别人能不能用起来。写法见 [`references/sharing.md`](./references/sharing.md)。
+
+## 模板
+
+`templates/` 下七份，复制就能用。每份含输入说明、提示词原文、输出契约、验收清单、失败处理。
+
+| 模板 | 用在什么时候 |
+|---|---|
+| [`00-define.md`](./templates/00-define.md) | 开工前把边界定义清楚 |
+| [`01-brief.md`](./templates/01-brief.md) | 零散信息收成一页简报 |
+| [`02-extract.md`](./templates/02-extract.md) | 长文档里拿出行动清单 |
+| [`03-map.md`](./templates/03-map.md) | 把多环节的事画成图 |
+| [`04-stats.md`](./templates/04-stats.md) | 台账变成能进汇报的统计 |
+| [`05-report.md`](./templates/05-report.md) | 材料齐了，出汇报大纲 |
+| [`06-weekly.md`](./templates/06-weekly.md) | 每周固定交周报，三步精简版 |
+
+## 输出契约
+
+每一步的产物长什么样，事先写死。写完对着核，比事后返工便宜。
+
+| 步 | 产物 | 硬性要求 |
 |---|---|---|
-| 一 | 查资料：限定主题与时间范围，整理成一页简报 | 信息简报（信息点 / 来源 / 与工作关系） |
-| 二 | 读文件：长文档按五要素提取，不复述全文 | 行动清单（事项 / 负责人 / 时间 / 依据） |
-| 三 | 理流程：把复杂事情画成流程图或职责图 | 流程图（含人工审核节点） |
-| 四 | 做表格：统一口径再汇总，写明计算方式 | 统计表（带计算过程，可复核） |
-| 五 | 写汇报：五页骨架，每页一个结论 | PPT 初稿（交人工复核） |
+| 0 | 任务卡 | 四问有答案，含一句「不做什么」 |
+| 1 | 信息简报 | 三列，最多四行，每行可溯源 |
+| 2 | 行动清单 | 事项是动词开头，负责人不臆造 |
+| 3 | 流程图 | 并行不画成串行，审核节点不省 |
+| 4 | 统计表 | 分类合计等于总数，公式写在表下 |
+| 5 | 汇报大纲 | 每页一个结论，标题是结论句 |
+| 6 | 核对记录 | 三处数字、口径、结论逐条写明 |
 
-五步不必每次全走。缺哪步跳哪步，但已走步骤的顺序不乱、交接物不省。
-
-## 30 秒上手
+## 三十秒上手
 
 把这句话发给 AI：
 
@@ -63,11 +118,9 @@
 数字必须保留原始依据，不要臆造。
 ```
 
-它会把五步拆开做，每步停下来给你过检查清单，再进下一步。
+它会拆成几步做，每步停下来给你过检查清单，再进下一步。
 
 ## 安装
-
-### 一条命令
 
 ```bash
 git clone https://github.com/YardonYan/office-ai-workflow.git
@@ -78,103 +131,39 @@ node tools/install.mjs --ai all        # 一次装到全部
 
 零依赖，只用 Node 标准库。支持 `--dry-run` 预览、`--force` 覆盖、`--uninstall` 卸载、`--project` 装进当前项目、`--dir` 装到自定义目录。
 
-### 手动放
+手动放也行，保证 `<技能目录>/office-ai-workflow/SKILL.md` 这个层级存在。
 
-把整个仓库目录拷到对应位置，保证 `<技能目录>/office-ai-workflow/SKILL.md` 这个层级存在。
-
-| 应用 | 全局目录 | 项目目录 |
-|---|---|---|
-| WorkBuddy | `~/.workbuddy/skills/` | `.workbuddy/skills/` |
-| CodeBuddy | `~/.codebuddy/skills/` | `.codebuddy/skills/` |
-| TRAE 国内版 | `~/.trae-cn/skills/` | `.trae-cn/skills/` |
-| TRAE 国际版 | `~/.trae/skills/` | `.trae/skills/` |
-| Qoder 国内版 | `~/.qoder-cn/skills/` | `.qoder/skills/` |
-| Qoder 国际版 | `~/.qoder/skills/` | `.qoder/skills/` |
-| Qwen Code | `~/.qwen/skills/` | `.qwen/skills/` |
-| 通义灵码 | `~/.lingma/skills/` | `.lingma/skills/` |
-| Kimi Code CLI | `~/.kimi/skills/` | `.kimi/skills/` |
-| iFlow CLI | `~/.iflow/skills/` | `.iflow/skills/` |
-| OpenClaw | `~/.openclaw/skills/` | `.openclaw/skills/` |
-| 华为 CodeArts Doer | `~/.codeartsdoer/skills/` | — |
-| Claude Code | `~/.claude/skills/` | `.claude/skills/` |
-| Codex CLI | `~/.codex/skills/` | `.codex/skills/` |
-| Cursor | `~/.cursor/skills/` | `.cursor/skills/` |
-| 通用约定 | `~/.agents/skills/` | `.agents/skills/` |
-
-国内工具排前面。装完重启应用，或在应用里执行一次刷新。
-
-## 使用途径
-
-| 途径 | 怎么做 | 适合 |
-|---|---|---|
-| 安装器 | `node tools/install.mjs --ai <id>` | 本机长期使用，一条命令覆盖多个应用 |
-| 手动拷贝 | 拷目录到上表位置 | 只用一两个应用，不想跑命令 |
-| 项目内 | 放进项目的 `.codebuddy/skills/` 等目录，随仓库提交 | 团队共用，换机器自动带上 |
-| 插件市场 | 见 `.claude-plugin/` 与 `.codebuddy-plugin/` 的清单 | 支持插件市场的应用，一次装好 |
-
-不适用：网页版 IDE（CodeSandbox、StackBlitz）和云 Shell。技能是给 AI 读的指令文件，这些环境没有加载入口。
+| 应用 | 全局目录 |
+|---|---|
+| WorkBuddy | `~/.workbuddy/skills/` |
+| CodeBuddy | `~/.codebuddy/skills/` |
+| TRAE 国内版 / 国际版 | `~/.trae-cn/skills/` · `~/.trae/skills/` |
+| Qoder 国内版 / 国际版 | `~/.qoder-cn/skills/` · `~/.qoder/skills/` |
+| QoderWork | `~/.qoderwork/skills/` |
+| Qwen Code | `~/.qwen/skills/` |
+| 通义灵码 | `~/.lingma/skills/` |
+| Kimi Code CLI | `~/.kimi/skills/` |
+| iFlow CLI | `~/.iflow/skills/` |
+| CodeArts Doer | `~/.codeartsdoer/skills/` |
+| OpenClaw | `~/.openclaw/workspace/skills/` |
+| Claude Code | `~/.claude/skills/` |
+| Codex CLI | `~/.codex/skills/` |
+| Cursor | `~/.cursor/skills/` |
+| 通用约定 | `~/.agents/skills/` |
 
 ## 内含
 
-主册给顺序和原则，细节在四个分册里，按需读，不占平时上下文。
-
 | 文件 | 内容 |
 |---|---|
-| `SKILL.md` | 主册：三条机制、全景图、开工四件事、五步要点、检查点、失败处理 |
-| `references/why-and-how.md` | 别人怎么搭流水线：提示词链、数字员工、任务编排、模板加变量四种流派，以及拆分过头与一步到位的判断 |
-| `references/steps-deep.md` | 五步各自的输入、动作、产物定义、检查项、常见错误、失败处理 |
-| `references/variants.md` | 六种变体：三步精简、周报专线、月度复盘、会议专线、竞品简报、纯对话版 |
-| `references/scenarios.md` | 三类延伸：面向客户的材料、跨部门协作出品、把五步换成本行业流程 |
-| `references/examples.md` | 三个完整案例，带真实的输入输出与卡点处理 |
-| `templates/` | 六份可直接复制的提示词模板 |
-| `CONTRIBUTING.md` | 想贡献模板时先看这个 |
-
-## 模板
-
-`templates/` 下六份，复制就能用。每份含输入说明、提示词原文、输出契约、验收清单、失败处理。
-
-| 模板 | 用在什么时候 |
-|---|---|
-| [`01-brief.md`](./templates/01-brief.md) | 要把零散信息收成一页简报 |
-| [`02-extract.md`](./templates/02-extract.md) | 要从长文档里拿出行动清单 |
-| [`03-map.md`](./templates/03-map.md) | 要把一件多环节的事画成图 |
-| [`04-stats.md`](./templates/04-stats.md) | 要把台账变成能进汇报的统计 |
-| [`05-report.md`](./templates/05-report.md) | 材料齐了，要出汇报大纲 |
-| [`06-weekly.md`](./templates/06-weekly.md) | 每周固定交周报，走三步精简版 |
-
-## 输出契约
-
-每一步的产物长什么样，事先写死。写完对着核，比事后返工便宜。
-
-| 步 | 产物 | 硬性要求 |
-|---|---|---|
-| 一 | 信息简报 | 三列，最多四行，每行可溯源 |
-| 二 | 行动清单 | 事项是动词开头，负责人不臆造 |
-| 三 | 流程图 | 并行不画成串行，审核节点不省 |
-| 四 | 统计表 | 分类合计等于总数，公式写在表下 |
-| 五 | 汇报大纲 | 每页一个结论，标题是结论句 |
-
-## 什么时候用 / 不用
-
-| 用 | 不用 |
-|---|---|
-| 每月固定要交的复盘 | 一次性的临时问答 |
-| 跨部门联合出品的材料 | 只有自己看的工作笔记 |
-| 需要留档、需要复用的产出 | 结论已定、只差一句话的事 |
-| 材料散在多个文件里 | 材料本身还没准备好 |
-
-判断标准一条：这件事下个月还会再做一遍吗。会，值得建流程；不会，做完算数。
-
-## 为什么值得做成流水线
-
-这套东西值得复用的不是某一次生成，是固定的输入、处理和检查套路。下次只换四样：
-
-1. 新的源文件
-2. 新的时间范围
-3. 新的统计口径
-4. 新的汇报主题
-
-不能省的四样：来源与依据、人工检查、数据复核、敏感信息处理。
+| `SKILL.md` | 主册：两种用法、七步、设计方法、改造、文档化、检查点、失败处理 |
+| `references/design.md` | 从零设计的完整版：三种起点、记录真实过程、六个陷阱、最小可用流程 |
+| `references/sharing.md` | 怎么写文档：八段结构、三种形态、第一屏、维护 |
+| `references/why-and-how.md` | 别人怎么搭流水线：四种流派与共有机制 |
+| `references/steps-deep.md` | 每步的输入、动作、产物定义、检查项、常见错误 |
+| `references/variants.md` | 六种变体：三步精简、周报、复盘、会议、竞品、纯对话 |
+| `references/scenarios.md` | 客户材料、跨部门、行业流程改造 |
+| `references/examples.md` | 三个完整案例 |
+| `templates/` | 七份可直接复制的提示词模板 |
 
 ## 硬性底线
 
@@ -185,16 +174,14 @@ node tools/install.mjs --ai all        # 一次装到全部
 
 ## 兼容性
 
-按 [Agent Skills](https://agentskills.io) 开放标准组织：一个目录、一个 `SKILL.md`、YAML frontmatter 只含规范允许的字段。凡是支持该标准的工具都能直接加载，不需要转换。
+按 [Agent Skills](https://agentskills.io) 开放标准组织：一个目录、一个 `SKILL.md`、frontmatter 只含规范允许的字段。支持该标准的工具都能直接加载，不需要转换。
 
-技能本身不依赖任何脚本、网络和第三方包。`tools/` 下两个脚本只用于安装和生成插件清单，删掉不影响技能工作。
+技能本身不依赖脚本、网络和第三方包。`tools/` 下两个脚本只用于安装和生成图与插件清单，删掉不影响技能工作。
 
-## 相关
+## 贡献
 
-- 配套技能：[slides-workflow](https://github.com/YardonYan/for-my-self-skills)（把大纲做成成稿 PPT）
-- 技能合集：[for-my-self-skills](https://github.com/YardonYan/for-my-self-skills)
+模板和场景变体都收。格式要求见 [`CONTRIBUTING.md`](./CONTRIBUTING.md)。
 
 ## 许可
 
 [Apache-2.0](./LICENSE)，版权行 `Copyright 2026 YardonYan`。
-
