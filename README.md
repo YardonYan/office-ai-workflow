@@ -6,7 +6,7 @@
 
 #### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-2.7.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.8.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
@@ -171,18 +171,15 @@
 
 ## 成品长什么样
 
-六份单文件 HTML，点开就能看，也能直接当模板用：复制过去替换内容，就是你的初稿。
+六份单文件 HTML，点开即看。既是示例，也是模板：复制过去替换内容，就是你的初稿。
 
-**在线预览**：https://yardonyan.github.io/office-ai-workflow/examples/
+<p align="center"><sub>在线预览 · <a href="https://yardonyan.github.io/office-ai-workflow/examples/">yardonyan.github.io/office-ai-workflow/examples</a></sub></p>
 
-| 示例 | 看什么 |
+| | |
 |---|---|
-| [信息简报](https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html) | 三列结构、来源标注、影响判断、结尾一个建议动作 |
-| [行动清单](https://yardonyan.github.io/office-ai-workflow/examples/action-list.html) | 五要素提取，负责人缺失怎么标 |
-| [周报](https://yardonyan.github.io/office-ai-workflow/examples/weekly.html) | 三段式，400 字以内，风险带条件 |
-| [会议纪要](https://yardonyan.github.io/office-ai-workflow/examples/minutes.html) | 五段结构，待办四列 |
-| [月度复盘](https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html) | 五页骨架、数据条与口径说明、问题页带应对 |
-| [示例目录](https://yardonyan.github.io/office-ai-workflow/examples/index.html) | 全部示例的入口页 |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html"><img src="./assets/samples/research-brief.png" width="330" alt="信息简报"></a><br><sub><b>信息简报</b> · 三列结构，结尾一个建议动作</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/action-list.html"><img src="./assets/samples/action-list.png" width="330" alt="行动清单"></a><br><sub><b>行动清单</b> · 五要素提取，负责人缺失怎么标</sub> |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/weekly.html"><img src="./assets/samples/weekly.png" width="330" alt="周报"></a><br><sub><b>周报</b> · 三段式，四百字以内</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/minutes.html"><img src="./assets/samples/minutes.png" width="330" alt="会议纪要"></a><br><sub><b>会议纪要</b> · 五段结构，待办四列</sub> |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html"><img src="./assets/samples/monthly-review.png" width="330" alt="月度复盘"></a><br><sub><b>月度复盘</b> · 五页骨架，数据与口径</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/index.html"><img src="./assets/samples/index.png" width="330" alt="示例目录"></a><br><sub><b>示例目录</b> · 全部示例的入口页</sub> |
 
 全部单文件、无外部依赖、打印友好。配色和排版可以直接复用，也可以按你的品牌改。
 
@@ -197,7 +194,7 @@
 | [`corpus/02-phrases.md`](./references/corpus/02-phrases.md) | 措辞库：开场、进展、成果、问题、计划、收尾，附禁用词与强弱替换表 |
 | [`corpus/03-samples.md`](./references/corpus/03-samples.md) | 六篇完整范文，覆盖运营周报、项目月报、会议纪要、协调邮件、一页方案、GRAI 复盘 |
 | [`corpus/04-real/`](./references/corpus/04-real/) | 真实产出收录：规范、模板、脱敏红线 |
-| [`corpus/05-walkthrough/`](./references/corpus/05-walkthrough/) | 完整走查：从任务卡到核对记录，七步全走一遍（数据虚构） |
+| [`corpus/05-walkthrough/`](./references/corpus/05-walkthrough/) | 两份完整走查：月度复盘（七步）、竞品简报（两步），数据虚构 |
 
 用法是拆开用，不是整篇套：结构照抄、句式改写、数据全换。
 

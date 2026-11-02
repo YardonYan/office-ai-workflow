@@ -2,6 +2,17 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.8.0 — 2026-11-03
+
+### Added
+
+- `corpus/05-walkthrough/competitor-brief-walkthrough.md` — a second walkthrough: a competitor brief done in two steps, built around source grading (first-hand, second-hand, third-hand), three of five raw intel items surviving the cut, and a recommendation to verify before reacting.
+- Six screenshot thumbnails under `assets/samples/`, wired into the README as a two-column preview grid so readers see the output before clicking.
+
+### Changed
+
+- The samples section now shows what each page looks like instead of describing it.
+
 ## 2.7.0 — 2026-11-03
 
 ### Added

@@ -6,7 +6,7 @@
 
 #### Design an office pipeline, then run it
 
-[![Version](https://img.shields.io/badge/version-2.7.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.8.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
@@ -140,18 +140,15 @@ It works the steps one at a time and stops at each checklist before moving on.
 
 ## What the output looks like
 
-Six single-file HTML pages. Open one, and you are looking at a finished deliverable — copy it, replace the content, ship it.
+Six single-file HTML pages. Open one and you are looking at a finished deliverable — copy it, replace the content, ship it.
 
-**Live preview**: https://yardonyan.github.io/office-ai-workflow/examples/
+<p align="center"><sub>Live preview · <a href="https://yardonyan.github.io/office-ai-workflow/examples/">yardonyan.github.io/office-ai-workflow/examples</a></sub></p>
 
-| Sample | What to look at |
+| | |
 |---|---|
-| [Research brief](https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html) | Three columns, sources, consequence, one closing action |
-| [Action list](https://yardonyan.github.io/office-ai-workflow/examples/action-list.html) | Five-field extraction, how missing owners are marked |
-| [Weekly report](https://yardonyan.github.io/office-ai-workflow/examples/weekly.html) | Three sections, under 400 words, risk with conditions |
-| [Meeting minutes](https://yardonyan.github.io/office-ai-workflow/examples/minutes.html) | Five sections, action table with owner and due date |
-| [Monthly review](https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html) | Five-section skeleton, bar chart with a stated formula |
-| [Index](https://yardonyan.github.io/office-ai-workflow/examples/index.html) | Entry page for all samples |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/research-brief.html"><img src="./assets/samples/research-brief.png" width="330" alt="信息简报"></a><br><sub><b>信息简报</b> · 三列结构，结尾一个建议动作</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/action-list.html"><img src="./assets/samples/action-list.png" width="330" alt="行动清单"></a><br><sub><b>行动清单</b> · 五要素提取，负责人缺失怎么标</sub> |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/weekly.html"><img src="./assets/samples/weekly.png" width="330" alt="周报"></a><br><sub><b>周报</b> · 三段式，四百字以内</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/minutes.html"><img src="./assets/samples/minutes.png" width="330" alt="会议纪要"></a><br><sub><b>会议纪要</b> · 五段结构，待办四列</sub> |
+| <a href="https://yardonyan.github.io/office-ai-workflow/examples/monthly-review.html"><img src="./assets/samples/monthly-review.png" width="330" alt="月度复盘"></a><br><sub><b>月度复盘</b> · 五页骨架，数据与口径</sub> | <a href="https://yardonyan.github.io/office-ai-workflow/examples/index.html"><img src="./assets/samples/index.png" width="330" alt="示例目录"></a><br><sub><b>示例目录</b> · 全部示例的入口页</sub> |
 
 All single-file, dependency-free, print-friendly.
 
@@ -166,7 +163,7 @@ No blank page when you write a weekly, a monthly, minutes, an email, a proposal 
 | [`corpus/02-phrases.md`](./references/corpus/02-phrases.md) | Phrase bank by position: opening, progress, results, problems, plans, closing — plus banned words and weak-to-strong rewrites |
 | [`corpus/03-samples.md`](./references/corpus/03-samples.md) | Six full samples: ops weekly, project monthly, meeting minutes, cross-team email, one-page proposal, GRAI retrospective |
 | [`corpus/04-real/`](./references/corpus/04-real/) | Real outputs: filing rules, template, redaction limits |
-| [`corpus/05-walkthrough/`](./references/corpus/05-walkthrough/) | A full walkthrough: task card to review record, all seven steps (fictional data) |
+| [`corpus/05-walkthrough/`](./references/corpus/05-walkthrough/) | Two walkthroughs: monthly review (seven steps), competitor brief (two steps), fictional data |
 
 Use them by parts, not whole: copy the structure, rewrite the phrasing, replace every number.
 
