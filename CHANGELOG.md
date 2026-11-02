@@ -2,6 +2,12 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.9.0 — 2026-11-03
+
+### Added
+
+- `corpus/05-walkthrough/meeting-actions-walkthrough.md` — a third walkthrough, and the first one built on a deliberately messy input: a raw meeting note with colloquialisms, gaps and a topic left unresolved. Demonstrates sorting seven paragraphs into decisions, actions, discussion and notices; six actions survive, two open questions get flagged as risks, one date moves to the calendar.
+
 ## 2.8.0 — 2026-11-03
 
 ### Added

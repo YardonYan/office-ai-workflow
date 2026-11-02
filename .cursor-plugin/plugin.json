@@ -2,7 +2,7 @@
   "name": "office-ai-workflow",
   "displayName": "office-ai-workflow",
   "description": "把零散的办公任务设计成一条可复用的工作流，并按需执行。",
-  "version": "2.8.0",
+  "version": "2.9.0",
   "author": {
     "name": "Yardon",
     "url": "https://github.com/YardonYan"

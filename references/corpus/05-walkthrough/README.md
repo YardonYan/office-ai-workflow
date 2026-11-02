@@ -19,6 +19,7 @@
 |---|---|
 | [`monthly-review-walkthrough.md`](./monthly-review-walkthrough.md) | 月度复盘。从任务卡到核对记录，七步全走一遍。附状态文件与事后复盘 |
 | [`competitor-brief-walkthrough.md`](./competitor-brief-walkthrough.md) | 竞品简报。两步走完，重点演示情报来源分级与「先核实再决策」 |
+| [`meeting-actions-walkthrough.md`](./meeting-actions-walkthrough.md) | 会议纪要转行动。输入是脏的（口语、省略、无结论），重点是四类拆分与未决事项单列 |
 
 ## 写新走查的规矩
 
