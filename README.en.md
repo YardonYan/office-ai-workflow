@@ -6,7 +6,7 @@
 
 #### Five recurring office tasks, chained into one pipeline
 
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-1.1.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
@@ -110,6 +110,33 @@ The main file carries the order and the principles. Details live in four referen
 | `references/variants.md` | Six variants: three-step, weekly, monthly retrospective, meeting, competitor brief, chat-only |
 | `references/scenarios.md` | Three extensions: client-facing material, cross-team output, adapting the five steps to your industry |
 | `references/examples.md` | Three worked cases with real inputs, outputs and snags |
+| `templates/` | Six copy-paste prompt templates |
+| `CONTRIBUTING.md` | Read before proposing a template |
+
+## Templates
+
+Six copy-paste prompts under `templates/`. Each carries inputs, the prompt, an output contract, an acceptance list and failure handling.
+
+| Template | Use it when |
+|---|---|
+| [`01-brief.md`](./templates/01-brief.md) | Scattered information needs to become a one-page brief |
+| [`02-extract.md`](./templates/02-extract.md) | A long document needs to become an action list |
+| [`03-map.md`](./templates/03-map.md) | A multi-step process needs to become a diagram |
+| [`04-stats.md`](./templates/04-stats.md) | A ledger needs to become a stats table |
+| [`05-report.md`](./templates/05-report.md) | Materials are ready and you need a deck outline |
+| [`06-weekly.md`](./templates/06-weekly.md) | The weekly report, three-step variant |
+
+## Output contracts
+
+Fix what each step produces before you start. Checking against it afterwards is cheaper than rework.
+
+| Step | Artifact | Hard requirement |
+|---|---|---|
+| 1 | Brief | Three columns, four rows max, every row traceable |
+| 2 | Action list | Items start with a verb, owners never invented |
+| 3 | Flow | Parallel work not drawn as sequential, review gates kept |
+| 4 | Stats table | Categories sum to the total, formula written below |
+| 5 | Deck outline | One conclusion per slide, titles are conclusions |
 
 ## Non-negotiables
 

@@ -6,7 +6,7 @@
 
 #### 把五个高频办公任务串成一条流水线
 
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-1.1.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
@@ -126,6 +126,44 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/variants.md` | 六种变体：三步精简、周报专线、月度复盘、会议专线、竞品简报、纯对话版 |
 | `references/scenarios.md` | 三类延伸：面向客户的材料、跨部门协作出品、把五步换成本行业流程 |
 | `references/examples.md` | 三个完整案例，带真实的输入输出与卡点处理 |
+| `templates/` | 六份可直接复制的提示词模板 |
+| `CONTRIBUTING.md` | 想贡献模板时先看这个 |
+
+## 模板
+
+`templates/` 下六份，复制就能用。每份含输入说明、提示词原文、输出契约、验收清单、失败处理。
+
+| 模板 | 用在什么时候 |
+|---|---|
+| [`01-brief.md`](./templates/01-brief.md) | 要把零散信息收成一页简报 |
+| [`02-extract.md`](./templates/02-extract.md) | 要从长文档里拿出行动清单 |
+| [`03-map.md`](./templates/03-map.md) | 要把一件多环节的事画成图 |
+| [`04-stats.md`](./templates/04-stats.md) | 要把台账变成能进汇报的统计 |
+| [`05-report.md`](./templates/05-report.md) | 材料齐了，要出汇报大纲 |
+| [`06-weekly.md`](./templates/06-weekly.md) | 每周固定交周报，走三步精简版 |
+
+## 输出契约
+
+每一步的产物长什么样，事先写死。写完对着核，比事后返工便宜。
+
+| 步 | 产物 | 硬性要求 |
+|---|---|---|
+| 一 | 信息简报 | 三列，最多四行，每行可溯源 |
+| 二 | 行动清单 | 事项是动词开头，负责人不臆造 |
+| 三 | 流程图 | 并行不画成串行，审核节点不省 |
+| 四 | 统计表 | 分类合计等于总数，公式写在表下 |
+| 五 | 汇报大纲 | 每页一个结论，标题是结论句 |
+
+## 什么时候用 / 不用
+
+| 用 | 不用 |
+|---|---|
+| 每月固定要交的复盘 | 一次性的临时问答 |
+| 跨部门联合出品的材料 | 只有自己看的工作笔记 |
+| 需要留档、需要复用的产出 | 结论已定、只差一句话的事 |
+| 材料散在多个文件里 | 材料本身还没准备好 |
+
+判断标准一条：这件事下个月还会再做一遍吗。会，值得建流程；不会，做完算数。
 
 ## 为什么值得做成流水线
 

@@ -6,7 +6,7 @@ compatibility: 任何支持 Markdown 与文件读写的 AI 助手；不需要脚
 metadata:
   author: Yardon
   author-url: https://github.com/YardonYan
-  version: "1.0.0"
+  version: "1.1.0"
   created: "2026-11-02"
   updated: "2026-11-02"
   category: office
