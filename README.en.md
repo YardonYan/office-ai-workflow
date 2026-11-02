@@ -13,6 +13,10 @@
 
 </div>
 
+<p align="center">
+  <img src="./assets/cover.svg" width="100%" alt="office-ai-workflow: five workstations on one line">
+</p>
+
 ---
 
 > Research, read, map, tabulate, report. None of the five is hard on its own; chaining them is what saves time.
@@ -34,10 +38,9 @@ The pipeline fixes the order and the handoffs: research feeds reading, reading f
 
 ## The five steps
 
-```
-Research ──→ Read ──→ Map ──→ Tabulate ──→ Report ──→ Human review
-  brief      actions   flow      stats        deck        final
-```
+<p align="center">
+  <img src="./assets/pipeline.svg" width="100%" alt="Five steps and their handoffs: brief, action list, flow, stats table, draft deck, then human review">
+</p>
 
 | Step | What happens | What it hands over |
 |---|---|---|
@@ -105,6 +108,7 @@ The main file carries the order and the principles. Details live in four referen
 | `references/why-and-how.md` | How others build pipelines: prompt chains, role relay, task orchestration, template-plus-variable; when splitting goes too far |
 | `references/steps-deep.md` | Per-step inputs, actions, output definition, checklist, common mistakes, failure handling |
 | `references/variants.md` | Six variants: three-step, weekly, monthly retrospective, meeting, competitor brief, chat-only |
+| `references/scenarios.md` | Three extensions: client-facing material, cross-team output, adapting the five steps to your industry |
 | `references/examples.md` | Three worked cases with real inputs, outputs and snags |
 
 ## Non-negotiables

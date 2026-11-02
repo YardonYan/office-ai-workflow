@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="336" viewBox="0 0 900 336" role="img" aria-label="office-ai-workflow">
+<rect width="900" height="336" fill="#F7F5F0"/>
+<text x="60" y="62" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="25" font-weight="600" fill="#1F2328">office-ai-workflow</text>
+<text x="60" y="90" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="14" fill="#6B675E">五步办公流水线：从零散资料到一页汇报</text>
+<text x="60" y="110" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="10.5" fill="#A39E93">Five office tasks, chained into one pipeline</text>
+<line x1="620" y1="46" x2="840" y2="46" stroke="#DED9CE" stroke-width="1"/>
+<text x="840" y="40" text-anchor="end" font-family="JetBrains Mono, SF Mono, Menlo, Consolas, monospace" font-size="9" letter-spacing="1" fill="#A39E93">AGENT SKILL · APACHE-2.0</text>
+<rect x="55.0" y="262" width="790" height="3" rx="1.5" fill="#DED9CE"/>
+<rect x="81.0" y="152" width="130" height="116" rx="7" fill="#FFFFFF" stroke="#DED9CE" stroke-width="1.2"/>
+<rect x="81.0" y="152" width="130" height="4" rx="2" fill="#2F5D50" fill-opacity="0.35"/>
+<text x="95.0" y="178" font-family="JetBrains Mono, SF Mono, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#A39E93">01</text>
+<text x="95.0" y="198" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1F2328">查资料</text>
+<circle cx="143.0" cy="224" r="9" fill="none" stroke="#2F5D50" stroke-width="1.8"/>
+<line x1="150.0" y1="231" x2="157.0" y2="238" stroke="#2F5D50" stroke-width="1.8" stroke-linecap="round"/>
+<text x="146.0" y="294" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="10.5" fill="#B4592F">简报</text>
+<path d="M217.0 207 h8 m-3 -3 l3 3 l-3 3" fill="none" stroke="#A39E93" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="233.0" y="152" width="130" height="116" rx="7" fill="#FFFFFF" stroke="#DED9CE" stroke-width="1.2"/>
+<rect x="233.0" y="152" width="130" height="4" rx="2" fill="#2F5D50" fill-opacity="0.47"/>
+<text x="247.0" y="178" font-family="JetBrains Mono, SF Mono, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#A39E93">02</text>
+<text x="247.0" y="198" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1F2328">读文件</text>
+<rect x="288.0" y="213" width="20" height="26" rx="2" fill="none" stroke="#2F5D50" stroke-width="1.6"/>
+<line x1="293.0" y1="220" x2="303.0" y2="220" stroke="#2F5D50" stroke-width="1.3" stroke-opacity=".55"/>
+<line x1="293.0" y1="227" x2="303.0" y2="227" stroke="#2F5D50" stroke-width="1.3" stroke-opacity=".55"/>
+<line x1="293.0" y1="234" x2="303.0" y2="234" stroke="#2F5D50" stroke-width="1.3" stroke-opacity=".55"/>
+<text x="298.0" y="294" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="10.5" fill="#B4592F">清单</text>
+<path d="M369.0 207 h8 m-3 -3 l3 3 l-3 3" fill="none" stroke="#A39E93" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="385.0" y="152" width="130" height="116" rx="7" fill="#FFFFFF" stroke="#DED9CE" stroke-width="1.2"/>
+<rect x="385.0" y="152" width="130" height="4" rx="2" fill="#2F5D50" fill-opacity="0.59"/>
+<text x="399.0" y="178" font-family="JetBrains Mono, SF Mono, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#A39E93">03</text>
+<text x="399.0" y="198" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1F2328">理流程</text>
+<rect x="437.0" y="212" width="12" height="9" rx="1.5" fill="none" stroke="#2F5D50" stroke-width="1.5"/>
+<rect x="451.0" y="231" width="12" height="9" rx="1.5" fill="none" stroke="#2F5D50" stroke-width="1.5"/>
+<path d="M443.0 221 V226 H457.0 V231" fill="none" stroke="#2F5D50" stroke-width="1.4"/>
+<text x="450.0" y="294" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="10.5" fill="#B4592F">流程图</text>
+<path d="M521.0 207 h8 m-3 -3 l3 3 l-3 3" fill="none" stroke="#A39E93" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="537.0" y="152" width="130" height="116" rx="7" fill="#FFFFFF" stroke="#DED9CE" stroke-width="1.2"/>
+<rect x="537.0" y="152" width="130" height="4" rx="2" fill="#2F5D50" fill-opacity="0.71"/>
+<text x="551.0" y="178" font-family="JetBrains Mono, SF Mono, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#A39E93">04</text>
+<text x="551.0" y="198" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1F2328">做表格</text>
+<rect x="590.0" y="215" width="24" height="22" rx="2" fill="none" stroke="#2F5D50" stroke-width="1.5"/>
+<line x1="590.0" y1="222" x2="614.0" y2="222" stroke="#2F5D50" stroke-width="1.3" stroke-opacity=".6"/>
+<line x1="598.0" y1="215" x2="598.0" y2="237" stroke="#2F5D50" stroke-width="1.3" stroke-opacity=".6"/>
+<text x="602.0" y="294" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="10.5" fill="#B4592F">统计表</text>
+<path d="M673.0 207 h8 m-3 -3 l3 3 l-3 3" fill="none" stroke="#A39E93" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="689.0" y="152" width="130" height="116" rx="7" fill="#FFFFFF" stroke="#DED9CE" stroke-width="1.2"/>
+<rect x="689.0" y="152" width="130" height="4" rx="2" fill="#2F5D50" fill-opacity="0.83"/>
+<text x="703.0" y="178" font-family="JetBrains Mono, SF Mono, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1.2" fill="#A39E93">05</text>
+<text x="703.0" y="198" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="14" font-weight="600" fill="#1F2328">写汇报</text>
+<rect x="741.0" y="215" width="26" height="20" rx="2" fill="none" stroke="#2F5D50" stroke-width="1.5"/>
+<path d="M746.0 230 l6 -8 l5 5 l6 -9" fill="none" stroke="#2F5D50" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="754.0" y="294" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="10.5" fill="#B4592F">初稿</text>
+<text x="60" y="318" font-family="PingFang SC, Microsoft YaHei, Noto Sans SC, system-ui, sans-serif" font-size="10.5" fill="#A39E93">上一步的产出是下一步的原料。人只在两端：开头交代四件事，结尾核对数字与结论。</text>
+</svg>

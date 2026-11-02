@@ -14,6 +14,10 @@
 
 </div>
 
+<p align="center">
+  <img src="./assets/cover.svg" width="100%" alt="office-ai-workflow：五个工位串成一条流水线">
+</p>
+
 ---
 
 > 查资料、读文件、理流程、做表格、写汇报，五件事单看都不难，串起来才省时间。
@@ -35,10 +39,9 @@
 
 ## 五步
 
-```
-查资料 ──→ 读文件 ──→ 理流程 ──→ 做表格 ──→ 写汇报 ──→ 人工复核
-信息简报    行动清单    流程图     统计表     PPT 初稿    正式汇报
-```
+<p align="center">
+  <img src="./assets/pipeline.svg" width="100%" alt="五步与交接物：查资料→信息简报、读文件→行动清单、理流程→流程图、做表格→统计表、写汇报→初稿，最后人工复核">
+</p>
 
 | 步 | 做什么 | 交出什么 |
 |---|---|---|
@@ -121,6 +124,7 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/why-and-how.md` | 别人怎么搭流水线：提示词链、数字员工、任务编排、模板加变量四种流派，以及拆分过头与一步到位的判断 |
 | `references/steps-deep.md` | 五步各自的输入、动作、产物定义、检查项、常见错误、失败处理 |
 | `references/variants.md` | 六种变体：三步精简、周报专线、月度复盘、会议专线、竞品简报、纯对话版 |
+| `references/scenarios.md` | 三类延伸：面向客户的材料、跨部门协作出品、把五步换成本行业流程 |
 | `references/examples.md` | 三个完整案例，带真实的输入输出与卡点处理 |
 
 ## 为什么值得做成流水线

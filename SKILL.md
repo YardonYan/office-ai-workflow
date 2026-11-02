@@ -264,4 +264,5 @@ metadata:
 | `references/why-and-how.md` | 想知道这套方法从哪来、别人是怎么搭流水线的 |
 | `references/steps-deep.md` | 具体某一步不会做，要看输入输出定义和常见错误 |
 | `references/variants.md` | 手上的任务不是完整五步，要挑一个变体 |
+| `references/scenarios.md` | 要给客户交东西、跨部门联合出品、或把五步换成本行业流程 |
 | `references/examples.md` | 想照着完整案例走一遍 |
