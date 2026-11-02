@@ -6,7 +6,7 @@ compatibility: 任何支持 Markdown 与文件读写的 AI 助手；不需要脚
 metadata:
   author: Yardon
   author-url: https://github.com/YardonYan
-  version: "2.2.0"
+  version: "2.3.0"
   created: "2026-11-02"
   updated: "2026-11-02"
   category: office
@@ -262,9 +262,11 @@ metadata:
 
 | 文件 | 里面有什么 | 什么时候翻 |
 |---|---|---|
+| `00-sources.md` | 每份语料的来源、方法论出处、核验方式 | 想知道某个说法可不可信 |
 | `01-formats.md` | 六种文档的骨架，每种带判据和常见错误 | 不知道分几段、每段该放什么 |
 | `02-phrases.md` | 按位置分的措辞库：开场、进展、成果、问题、计划、收尾 | 知道要说什么，但写出来干巴巴 |
 | `03-samples.md` | 六篇完整范文，覆盖运营、项目、会议、邮件、方案、复盘 | 想看看成型的什么样 |
+| `04-real/` | 真实产出与收录规范，含脱敏红线 | 想放自己的真实案例进来 |
 
 用法是拆开用，不是整篇套：结构照抄，句式改写，数据全换。
 
