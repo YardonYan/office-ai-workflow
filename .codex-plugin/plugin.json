@@ -1,0 +1,36 @@
+{
+  "name": "office-ai-workflow",
+  "version": "1.0.0",
+  "description": "把查资料、读文件、理流程、做表格、写汇报五个高频办公任务串成一条接力式 AI 工作流。",
+  "author": {
+    "name": "Yardon",
+    "url": "https://github.com/YardonYan"
+  },
+  "homepage": "https://github.com/YardonYan/.tmp-office",
+  "repository": "https://github.com/YardonYan/.tmp-office",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skill",
+    "ai-skill",
+    "office-ai-workflow"
+  ],
+  "skills": "./",
+  "hooks": {},
+  "interface": {
+    "displayName": "office-ai-workflow",
+    "shortDescription": "把查资料、读文件、理流程、做表格、写汇报五个高频办公任务串成一条接力式 AI 工作流。",
+    "longDescription": "把查资料、读文件、理流程、做表格、写汇报五个高频办公任务串成一条接力式 AI 工作流。 开工前交代四件事：要解决什么、重点关注哪些信息、输出成什么格式、按什么标准检查。 五步各自产出固定中间物（信息简报、行动清单、流程图、统计表、汇报初稿），上一步的 产出是下一步的原料；AI 负责整理起草，关键数字、原始依据和最终结论由人工核对。 触发词：工作流、办公提效、月度复盘、周报、月报、整理台账、汇总会议纪要、提炼行动 清单、画流程图、做统计表、进度统计、写汇报、复盘 PPT、资料整理成简报、帮我做本月 复盘、把这几个文件整理成汇报。",
+    "developerName": "Yardon",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "用 office-ai-workflow 处理当前项目里的相关任务",
+      "帮我看看这个项目的代码，用 office-ai-workflow 的规则来改"
+    ],
+    "websiteURL": "https://github.com/YardonYan/.tmp-office",
+    "screenshots": []
+  }
+}

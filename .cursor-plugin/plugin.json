@@ -1,0 +1,20 @@
+{
+  "name": "office-ai-workflow",
+  "displayName": "office-ai-workflow",
+  "description": "把查资料、读文件、理流程、做表格、写汇报五个高频办公任务串成一条接力式 AI 工作流。",
+  "version": "1.0.0",
+  "author": {
+    "name": "Yardon",
+    "url": "https://github.com/YardonYan"
+  },
+  "homepage": "https://github.com/YardonYan/.tmp-office",
+  "repository": "https://github.com/YardonYan/.tmp-office",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skill",
+    "ai-skill",
+    "office-ai-workflow"
+  ],
+  "skills": "./",
+  "hooks": {}
+}
