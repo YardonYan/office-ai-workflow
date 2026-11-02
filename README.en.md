@@ -95,6 +95,18 @@ Or copy the folder manually so that `<skills-dir>/office-ai-workflow/SKILL.md` e
 
 Restart the app, or trigger a skills refresh, after installing.
 
+## What's inside
+
+The main file carries the order and the principles. Details live in four reference files, loaded only when needed.
+
+| File | Content |
+|---|---|
+| `SKILL.md` | Three reasons to split, the pipeline, four things to brief before starting, checkpoints, failure handling |
+| `references/why-and-how.md` | How others build pipelines: prompt chains, role relay, task orchestration, template-plus-variable; when splitting goes too far |
+| `references/steps-deep.md` | Per-step inputs, actions, output definition, checklist, common mistakes, failure handling |
+| `references/variants.md` | Six variants: three-step, weekly, monthly retrospective, meeting, competitor brief, chat-only |
+| `references/examples.md` | Three worked cases with real inputs, outputs and snags |
+
 ## Non-negotiables
 
 1. The assistant drafts and organizes. Numbers, sources and conclusions get human review before they leave the room.
@@ -112,4 +124,3 @@ The skill itself needs no scripts, network or packages. The two files under `too
 
 [Apache-2.0](./LICENSE), `Copyright 2026 YardonYan`.
 
-Original provenance of the method is recorded in `metadata.source` inside `SKILL.md`. This repo abstracts and rewrites it; no original text is copied.

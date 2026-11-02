@@ -111,6 +111,18 @@ node tools/install.mjs --ai all        # 一次装到全部
 
 不适用：网页版 IDE（CodeSandbox、StackBlitz）和云 Shell。技能是给 AI 读的指令文件，这些环境没有加载入口。
 
+## 内含
+
+主册给顺序和原则，细节在四个分册里，按需读，不占平时上下文。
+
+| 文件 | 内容 |
+|---|---|
+| `SKILL.md` | 主册：三条机制、全景图、开工四件事、五步要点、检查点、失败处理 |
+| `references/why-and-how.md` | 别人怎么搭流水线：提示词链、数字员工、任务编排、模板加变量四种流派，以及拆分过头与一步到位的判断 |
+| `references/steps-deep.md` | 五步各自的输入、动作、产物定义、检查项、常见错误、失败处理 |
+| `references/variants.md` | 六种变体：三步精简、周报专线、月度复盘、会议专线、竞品简报、纯对话版 |
+| `references/examples.md` | 三个完整案例，带真实的输入输出与卡点处理 |
+
 ## 为什么值得做成流水线
 
 这套东西值得复用的不是某一次生成，是固定的输入、处理和检查套路。下次只换四样：
@@ -144,4 +156,3 @@ node tools/install.mjs --ai all        # 一次装到全部
 
 [Apache-2.0](./LICENSE)，版权行 `Copyright 2026 YardonYan`。
 
-方法论的原始出处见 `SKILL.md` 的 `metadata.source`，本仓只做抽象与重写，未复制原文。
