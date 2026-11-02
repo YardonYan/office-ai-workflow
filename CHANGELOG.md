@@ -2,11 +2,24 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.5.0 — 2026-11-03
+
+### Added
+
+- `references/mindset.md` — five ways of thinking that change the output by changing the question: first principles, adversarial review, ablation, Occam's razor, boundary check. Each carries an office-scenario example, plus a section on retiring steps that no longer earn their place.
+- `references/automation.md` — from human-driven to signal-driven: three trigger types (schedule, event, threshold), a rule table whose last column decides when to bother a person, one exit, two lists of settled decisions, and periodic subtraction.
+- `templates/pipeline-state.yaml` — an optional state file recording per-step status, artifact path, provenance and blockers. Plain text, no parser needed, so it does not break the zero-dependency rule.
+- Main file gained a section on when to start, and the reference index lists both new volumes.
+
+### Changed
+
+- Corpus provenance now names methods and fields only, never people or source articles.
+
 ## 2.4.0 — 2026-11-03
 
 ### Added
 
-- Seven operating principles in the main file, distilled from studying how WorkBuddy's built-in orchestrators work: classify before acting, route by deliverable, compose rather than enumerate, types must connect, define once, intermediates stay internal, one line of provenance per step.
+- Seven operating principles in the main file, drawn from orchestrator design patterns: classify before acting, route by deliverable, compose rather than enumerate, types must connect, define once, intermediates stay internal, one line of provenance per step.
 - A "what this does not cover, and where it goes" table: quick edits, single answers, finished decks, code, negotiation, unprepared data.
 - The seven-step table now carries an artifact-type column, so it is visible which outputs can feed which step.
 

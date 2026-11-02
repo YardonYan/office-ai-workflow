@@ -6,7 +6,7 @@
 
 #### Design an office pipeline, then run it
 
-[![Version](https://img.shields.io/badge/version-2.4.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.5.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
@@ -165,6 +165,8 @@ Supported apps include WorkBuddy, CodeBuddy, TRAE (CN and international), Qoder 
 |---|---|
 | `SKILL.md` | Main file: two ways in, seven steps, design moves, fixing, writing down, checkpoints, failure handling |
 | `references/design.md` | Designing from scratch: three starting points, observing a real run, six traps, a minimum viable pipeline |
+| `references/mindset.md` | Five ways of thinking: first principles, adversarial review, ablation, Occam's razor, boundary check |
+| `references/automation.md` | From human-driven to signal-driven: three trigger types, a rule table, one exit, settled decisions, periodic subtraction |
 | `references/sharing.md` | Documenting it: eight sections, three formats, the first screen, upkeep |
 | `references/why-and-how.md` | How others build pipelines: four schools and what they share |
 | `references/steps-deep.md` | Per-step inputs, actions, output definition, checklist, common mistakes |
@@ -172,7 +174,7 @@ Supported apps include WorkBuddy, CodeBuddy, TRAE (CN and international), Qoder 
 | `references/scenarios.md` | Client-facing material, cross-team output, adapting to an industry |
 | `references/examples.md` | Three worked cases |
 | `references/corpus/` | Corpus: sources, six skeletons, a phrase bank, six samples, real-output rules |
-| `templates/` | Seven copy-paste prompt templates |
+| `templates/` | Seven copy-paste prompt templates, plus an optional `pipeline-state.yaml` |
 | `examples/` | Two HTML samples, usable as templates |
 
 ## Non-negotiables

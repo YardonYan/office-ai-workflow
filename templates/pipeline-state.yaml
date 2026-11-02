@@ -1,0 +1,94 @@
+# 可选：流水线状态文件
+#
+# 用法：复制到产出目录，命名 pipeline-state.yaml，每完成一步更新一次。
+# 纯文本，不需要任何解析器。人和 AI 都能读，断点能续，事后能查。
+# 不用它也完全能跑，只是换人接手时要重新问一遍进度。
+
+task: 十月部门复盘
+created: 2026-11-03
+owner: Yardon
+deadline: 2026-11-06
+
+# 第 0 步的产物，后续所有步骤都以这里为准
+definition:
+  goal: 完成 10 月部门复盘，供周会用
+  focus:
+    - 客户反馈
+    - 进度卡点
+  deliverables:
+    - 一页简报
+    - 行动清单
+    - 统计表
+    - 五页大纲
+  acceptance: 数字有出处，负责人不臆造，问题页带措施
+  not_doing:
+    - 不涉及预算调整
+    - 不评价个人绩效
+
+# 每步一行，status 只有三种：pending / doing / done
+steps:
+  - id: 0
+    name: 定义
+    status: done
+    artifact: null
+    provenance: 四问已确认；负责人一栏待定 1 条
+    updated: 2026-11-03 09:10
+
+  - id: 1
+    name: 查资料
+    status: done
+    artifact: output/brief.md
+    provenance: 简报已过，来源 6 条全部可追溯
+    updated: 2026-11-03 10:40
+
+  - id: 2
+    name: 读文件
+    status: done
+    artifact: output/actions.md
+    provenance: 12 条待办，其中 3 条负责人原文未指定
+    updated: 2026-11-03 14:20
+
+  - id: 3
+    name: 理流程
+    status: doing
+    artifact: output/flow.md
+    provenance: 画到第三版，审核节点待业务确认
+    updated: 2026-11-03 16:05
+
+  - id: 4
+    name: 做表格
+    status: pending
+    artifact: null
+    provenance: null
+    updated: null
+
+  - id: 5
+    name: 写汇报
+    status: pending
+    artifact: null
+    provenance: null
+    updated: null
+
+  - id: 6
+    name: 复核
+    status: pending
+    artifact: null
+    provenance: null
+    updated: null
+
+# 影响进度的事，记了才有人管
+blockers:
+  - what: 接口文档未到，联调排期压到下周
+    since: 2026-11-01
+    owner: 信息部
+    impact: 统计表的口径可能变，需要在第 4 步前定
+    next_check: 2026-11-04
+
+# 拍过板的事，避免重复讨论
+decisions:
+  - at: 2026-11-03
+    what: 统计区间按自然月，跨月任务计入启动月
+    why: 与财务口径一致，方便对账
+  - at: 2026-11-03
+    what: 问题页只写三项，不多写
+    why: 会上讨论时间有限，多了讲不完

@@ -6,7 +6,7 @@
 
 #### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-2.4.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.5.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
@@ -95,6 +95,22 @@
 | 七 | 每步留一句溯源 | 不是打勾，是写清查了什么、结论是什么 |
 
 另外，有些活看着像办公流，其实不该走这条线。判断方法：只需要一次判断或一个动作，就别套流程。流程是为「多次交接、多人协作、要留档」准备的。
+
+## 五种思考方式
+
+七步管顺序，这一节管怎么想。五个提问方式，都是成熟方法论，说一句就能切换：
+
+| 方式 | 一句话 | 用在哪 |
+|---|---|---|
+| 第一性原理 | 不要沿现有方案优化，重新问这件事要解决什么 | 怀疑任务本身问错了 |
+| 对抗性审查 | 不要帮我找理由，找能推翻核心假设的反例 | 方案定稿前、汇报交出去前 |
+| 消融实验 | 分别去掉一个改动，看收益到底来自哪 | 一次做了好几个改动 |
+| 奥卡姆剃刀 | 满足需求的前提下删掉所有非必要步骤 | 流程越加越长 |
+| 边界检查 | 这份材料的职责边界清楚吗，该不该拆 | 文档结构乱、牵扯人多 |
+
+五句连起来用，对应五个认知动作：重新定义问题 → 攻击假设 → 验证贡献 → 删除复杂度 → 整理边界。
+
+细节与办公场景的例子见 [`references/mindset.md`](./references/mindset.md)。
 
 ## 模板
 
@@ -198,6 +214,8 @@ node tools/install.mjs --ai all        # 一次装到全部
 |---|---|
 | `SKILL.md` | 主册：两种用法、七步、设计方法、改造、文档化、检查点、失败处理 |
 | `references/design.md` | 从零设计的完整版：三种起点、记录真实过程、六个陷阱、最小可用流程 |
+| `references/mindset.md` | 五种思考方式：第一性原理、对抗性审查、消融实验、奥卡姆剃刀、边界检查 |
+| `references/automation.md` | 从人驱动到信号驱动：三类触发器、规则表、单一出口、定过的事、定期减法 |
 | `references/sharing.md` | 怎么写文档：八段结构、三种形态、第一屏、维护 |
 | `references/why-and-how.md` | 别人怎么搭流水线：四种流派与共有机制 |
 | `references/steps-deep.md` | 每步的输入、动作、产物定义、检查项、常见错误 |
@@ -205,7 +223,7 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/scenarios.md` | 客户材料、跨部门、行业流程改造 |
 | `references/examples.md` | 三个完整案例 |
 | `references/corpus/` | 语料：来源说明、六种文档骨架、措辞库、六篇范文、真实产出收录规范 |
-| `templates/` | 七份可直接复制的提示词模板 |
+| `templates/` | 七份可直接复制的提示词模板，外加可选的 `pipeline-state.yaml` |
 | `examples/` | 两份 HTML 成品，可当模板用 |
 
 ## 硬性底线
