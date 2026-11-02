@@ -31,7 +31,7 @@ All notable changes to this skill are recorded here. Format loosely follows Keep
 
 ### Added
 
-- `references/corpus/00-sources.md` — provenance for every piece: which methods are public domain (GRAI, KPT, AAR, Minto, 5W2H), which nine public articles were consulted and what was borrowed from each, what was not done (no copied text, no licensed assets, fictional data), and a five-point checklist for judging any template.
+- `references/corpus/00-sources.md` — provenance for every piece: which methods belong to the public domain (GRAI, KPT, AAR, structured-writing frameworks, 5W2H), what the corpus does not do (no copied passages, no licensed assets, fictional data), and a five-point checklist for judging any template.
 - Source headers on all three corpus files, each stating what is derived and what is self-written.
 - `references/corpus/04-real/` — rules for filing real outputs: what qualifies, naming, the five mandatory header fields, redaction limits, and a template.
 
