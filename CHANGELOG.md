@@ -2,6 +2,13 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.7.0 — 2026-11-03
+
+### Added
+
+- `references/corpus/05-walkthrough/` — a complete walkthrough of all seven steps on one task: task card, brief, action list, flow, stats table, deck outline, review record, plus the state file and a retrospective on the walkthrough itself. Data and company are fictional; the snags are realistic.
+- `04-real/README.md` now spells out the difference from the walkthrough folder: evidence versus sample.
+
 ## 2.6.0 — 2026-11-03
 
 ### Added

@@ -6,7 +6,7 @@
 
 #### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-2.6.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.7.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
@@ -197,6 +197,7 @@
 | [`corpus/02-phrases.md`](./references/corpus/02-phrases.md) | 措辞库：开场、进展、成果、问题、计划、收尾，附禁用词与强弱替换表 |
 | [`corpus/03-samples.md`](./references/corpus/03-samples.md) | 六篇完整范文，覆盖运营周报、项目月报、会议纪要、协调邮件、一页方案、GRAI 复盘 |
 | [`corpus/04-real/`](./references/corpus/04-real/) | 真实产出收录：规范、模板、脱敏红线 |
+| [`corpus/05-walkthrough/`](./references/corpus/05-walkthrough/) | 完整走查：从任务卡到核对记录，七步全走一遍（数据虚构） |
 
 用法是拆开用，不是整篇套：结构照抄、句式改写、数据全换。
 
@@ -246,7 +247,7 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/variants.md` | 六种变体：三步精简、周报、复盘、会议、竞品、纯对话 |
 | `references/scenarios.md` | 客户材料、跨部门、行业流程改造 |
 | `references/examples.md` | 三个完整案例 |
-| `references/corpus/` | 语料：来源说明、六种文档骨架、措辞库、六篇范文、真实产出收录规范 |
+| `references/corpus/` | 语料：来源、六种骨架、措辞库、六篇范文、真实产出规范、完整走查 |
 | `templates/` | 七份提示词模板，加 `pipeline-state.yaml` 与 `rules.json` |
 | `examples/` | 六份 HTML 成品，可当模板用 |
 
