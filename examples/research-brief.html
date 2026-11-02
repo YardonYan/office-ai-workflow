@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>信息简报 · 示例</title>
+<style>
+  :root {
+    --bg: #F7F5F0; --paper: #FFF; --ink: #1F2328; --muted: #6B675E;
+    --faint: #A39E93; --green: #2F5D50; --green-l: #E4EDE9;
+    --clay: #B4592F; --line: #DED9CE;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    line-height: 1.7; padding: 48px 20px 72px;
+  }
+  .sheet {
+    max-width: 780px; margin: 0 auto; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 6px; padding: 48px 56px 52px;
+  }
+  .kicker {
+    font: 11px/1 ui-monospace, Menlo, Consolas, monospace;
+    letter-spacing: 1.6px; color: var(--faint); text-transform: uppercase;
+  }
+  h1 { font-size: 26px; font-weight: 600; margin: 10px 0 6px; }
+  .range { font-size: 12.5px; color: var(--faint); }
+  .rule { height: 1px; background: var(--line); margin: 26px 0 8px; }
+  .row {
+    display: grid; grid-template-columns: 1fr 132px 210px;
+    gap: 20px; padding: 22px 0; border-bottom: 1px solid #F1EEE7;
+    align-items: start;
+  }
+  .row:last-of-type { border-bottom: none; }
+  .pt { font-size: 15px; font-weight: 500; }
+  .pt small {
+    display: block; margin-top: 5px; font-size: 13px; font-weight: 400;
+    color: var(--muted); line-height: 1.6;
+  }
+  .src {
+    font: 11.5px/1.6 ui-monospace, Menlo, Consolas, monospace;
+    color: var(--faint); padding-top: 3px;
+  }
+  .imp {
+    font-size: 13px; color: var(--green); background: var(--green-l);
+    padding: 8px 12px; border-radius: 4px; border-left: 2px solid var(--green);
+  }
+  .head {
+    display: grid; grid-template-columns: 1fr 132px 210px; gap: 20px;
+    font: 11px/1 ui-monospace, Menlo, Consolas, monospace;
+    letter-spacing: 1px; color: var(--faint); text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  .action {
+    margin-top: 34px; padding: 18px 20px; background: #FBF7F2;
+    border: 1px solid #EFE3D6; border-radius: 5px;
+  }
+  .action b { font-size: 13px; color: var(--clay); letter-spacing: .5px; }
+  .action p { margin-top: 6px; font-size: 14.5px; }
+  footer {
+    margin-top: 30px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 11.5px; color: var(--faint); display: flex;
+    justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+  @media (max-width: 700px) {
+    .sheet { padding: 30px 20px; }
+    .row, .head { grid-template-columns: 1fr; gap: 8px; }
+    .head { display: none; }
+    .src { padding-top: 0; }
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    .sheet { border: none; padding: 0; max-width: none; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="kicker">Research Brief</div>
+  <h1>十月客户反馈简报</h1>
+  <div class="range">统计区间 2026-10-01 至 10-31　·　共 3 条，全部可溯源</div>
+
+  <div class="rule"></div>
+
+  <div class="head">
+    <div>信息点</div><div>来源</div><div>对我们的影响</div>
+  </div>
+
+  <div class="row">
+    <div class="pt">
+      交付周期成为投诉第一原因
+      <small>本月 12 条投诉里有 7 条提到等太久，集中在改稿后的二次交付。</small>
+    </div>
+    <div class="src">售后汇总<br>10 月</div>
+    <div class="imp">需要把改稿确认前置，否则同类投诉会继续上升。</div>
+  </div>
+
+  <div class="row">
+    <div class="pt">
+      两家老客户询问年度框架合作
+      <small>均未进入报价环节，问的是「能不能保证交付时间」。</small>
+    </div>
+    <div class="src">销售记录<br>10-24 / 10-28</div>
+    <div class="imp">交付能力已成为续单的前置条件，不只是加分项。</div>
+  </div>
+
+  <div class="row">
+    <div class="pt">
+      同行开始做「7 天交付」承诺
+      <small>同城两家样本，均在官网首页标注，未说明适用范围。</small>
+    </div>
+    <div class="src">竞品官网<br>10-30</div>
+    <div class="imp">短期不用跟，但报价时需要准备好应对话术。</div>
+  </div>
+
+  <div class="action">
+    <b>建议动作</b>
+    <p>本周内把改稿确认单做成模板，先在三个在手项目上试跑，四周后看投诉量有没有下降。</p>
+  </div>
+
+  <footer>
+    <span>office-ai-workflow · 示例产出</span>
+    <span>每条信息均可点回原始出处</span>
+  </footer>
+
+</div>
+</body>
+</html>

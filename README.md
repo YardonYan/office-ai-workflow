@@ -6,7 +6,7 @@
 
 #### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
@@ -38,7 +38,7 @@
 
 ## 七步
 
-两端各加一步，中间五步是主体。两端那两步最容易被跳过，也最影响成败。
+两端各加一步，中间七步是主体。两端那两步最容易被跳过，也最影响成败。
 
 <p align="center">
   <img src="./assets/pipeline.svg" width="100%" alt="七步与交接物：定义→任务卡、查资料→简报、读文件→清单、理流程→流程图、做表格→统计表、写汇报→初稿、复核→核对记录">
@@ -120,6 +120,17 @@
 
 它会拆成几步做，每步停下来给你过检查清单，再进下一步。
 
+## 成品长什么样
+
+两份 HTML，双击就能打开。它们既是示例，也是模板：复制过去替换内容，就是你的初稿。
+
+| 示例 | 看什么 |
+|---|---|
+| [信息简报](./examples/research-brief.html) | 三列结构、来源标注、影响判断、结尾一个建议动作 |
+| [月度复盘](./examples/monthly-review.html) | 五页骨架、数据条与口径说明、问题页带应对 |
+
+两份都是单文件、无外部依赖、打印友好。配色和排版可以直接复用，也可以按你的品牌改。
+
 ## 安装
 
 ```bash
@@ -164,6 +175,7 @@ node tools/install.mjs --ai all        # 一次装到全部
 | `references/scenarios.md` | 客户材料、跨部门、行业流程改造 |
 | `references/examples.md` | 三个完整案例 |
 | `templates/` | 七份可直接复制的提示词模板 |
+| `examples/` | 两份 HTML 成品，可当模板用 |
 
 ## 硬性底线
 

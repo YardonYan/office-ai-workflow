@@ -6,7 +6,7 @@
 
 #### Design an office pipeline, then run it
 
-[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.1.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
@@ -105,6 +105,17 @@ a stats table and a deck outline. Keep the original source for every number.
 
 It works the steps one at a time and stops at each checklist before moving on.
 
+## What the output looks like
+
+Two HTML files, open them directly. They are samples and templates at once: copy, replace the content, and you have a first draft.
+
+| Sample | What to look at |
+|---|---|
+| [Research brief](./examples/research-brief.html) | Three columns, sources, consequence, one closing action |
+| [Monthly review](./examples/monthly-review.html) | Five-section skeleton, bar chart with a stated formula, risks with responses |
+
+Both are single-file, dependency-free and print-friendly. The layout is yours to reuse or rebrand.
+
 ## Install
 
 ```bash
@@ -131,6 +142,7 @@ Supported apps include WorkBuddy, CodeBuddy, TRAE (CN and international), Qoder 
 | `references/scenarios.md` | Client-facing material, cross-team output, adapting to an industry |
 | `references/examples.md` | Three worked cases |
 | `templates/` | Seven copy-paste prompt templates |
+| `examples/` | Two HTML samples, usable as templates |
 
 ## Non-negotiables
 

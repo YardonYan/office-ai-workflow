@@ -6,7 +6,7 @@ compatibility: 任何支持 Markdown 与文件读写的 AI 助手；不需要脚
 metadata:
   author: Yardon
   author-url: https://github.com/YardonYan
-  version: "2.0.0"
+  version: "2.1.0"
   created: "2026-11-02"
   updated: "2026-11-02"
   category: office
@@ -52,7 +52,7 @@ metadata:
 
 ## 七步
 
-两端各加一步，中间五步是主体。
+两端各加一步，中间七步是主体。
 
 <p align="center">
   <img src="./assets/pipeline.svg" width="100%" alt="七步与交接物：定义→任务卡、查资料→简报、读文件→清单、理流程→流程图、做表格→统计表、写汇报→初稿、复核→核对记录">
