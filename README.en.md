@@ -6,7 +6,7 @@
 
 #### Design an office pipeline, then run it
 
-[![Version](https://img.shields.io/badge/version-2.3.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.4.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#compatibility)
@@ -78,6 +78,22 @@ A pipeline only you can run is not a pipeline. Eight sections when you share it:
 purpose (including **what it does not do**) · when to use · inputs (including **what counts as bad input**) · output contract · guardrails · examples · how to run · changelog.
 
 The two most-skipped sections are the output contract and the bad-input note. They are also the two that decide whether anyone else can use it. Details: [`references/sharing.md`](./references/sharing.md).
+
+## Seven operating principles
+
+More important than memorising the seven steps. Scenarios vary; the principles do not.
+
+| # | Principle | In one line |
+|---|---|---|
+| 1 | Classify before acting | One-off or a pipeline, what form is the deliverable, what material exists — answer all three first |
+| 2 | Route by deliverable, not by name | The same request name can hide two paths; look at what ships, not what it is called |
+| 3 | Compose, do not enumerate | The seven steps are a standard composition, not the only one |
+| 4 | Types must connect | Each step's output has a type; the next step can only consume a matching one. A gap means a missing step |
+| 5 | Define once | Handoff rules are defined in one place and referenced elsewhere; duplicated definitions drift |
+| 6 | Intermediates stay internal | Briefs, lists, tables and diagrams are intermediate: give a path and a one-line summary, not a polished deliverable |
+| 7 | One line of provenance per step | Not a tick box: what was checked and what was concluded |
+
+Some work looks like office work but should not go through a pipeline. The test: if it needs one decision or one action, skip the pipeline. Pipelines exist for multiple handoffs, multiple people, and a record.
 
 ## Templates
 

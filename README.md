@@ -6,7 +6,7 @@
 
 #### 办公工作流的设计与实现
 
-[![Version](https://img.shields.io/badge/version-2.3.0-green.svg)](SKILL.md)
+[![Version](https://img.shields.io/badge/version-2.4.0-green.svg)](SKILL.md)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-Standard-8B5CF6.svg)](https://agentskills.io)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#兼容性)
@@ -79,6 +79,22 @@
 用途（含**不做什么**）· 什么时候用 · 输入（含**什么算坏输入**）· 输出契约 · 护栏 · 示例 · 运行说明 · 变更记录
 
 最容易被跳过的是输出契约和坏输入说明，这两样恰恰决定别人能不能用起来。写法见 [`references/sharing.md`](./references/sharing.md)。
+
+## 七条编排原则
+
+这一步比记住七步本身更重要。场景千变万化，原则不变。
+
+| # | 原则 | 一句话 |
+|---|---|---|
+| 一 | 先判类型再动手 | 做一次还是建流程、交什么形态、有没有材料，三句没答完别开工 |
+| 二 | 按交付物分路 | 同一个名字底下可能是两条路，看最终交什么，不看它叫什么 |
+| 三 | 组合优先于穷举 | 七步是标准组合，不是唯一答案，长尾场景自己组成 |
+| 四 | 类型必须衔接 | 每步产物有类型，下一步只能吃对得上的，接不上就是漏了一步 |
+| 五 | 关键定义只写一次 | 交接规则只定义一次，别处引用，重复定义最后一定对不上 |
+| 六 | 中间产物不外发 | 简报、清单、表、图都是中间态，只给路径和摘要 |
+| 七 | 每步留一句溯源 | 不是打勾，是写清查了什么、结论是什么 |
+
+另外，有些活看着像办公流，其实不该走这条线。判断方法：只需要一次判断或一个动作，就别套流程。流程是为「多次交接、多人协作、要留档」准备的。
 
 ## 模板
 

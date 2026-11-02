@@ -2,6 +2,18 @@
 
 All notable changes to this skill are recorded here. Format loosely follows Keep a Changelog; versions follow semver.
 
+## 2.4.0 — 2026-11-03
+
+### Added
+
+- Seven operating principles in the main file, distilled from studying how WorkBuddy's built-in orchestrators work: classify before acting, route by deliverable, compose rather than enumerate, types must connect, define once, intermediates stay internal, one line of provenance per step.
+- A "what this does not cover, and where it goes" table: quick edits, single answers, finished decks, code, negotiation, unprepared data.
+- The seven-step table now carries an artifact-type column, so it is visible which outputs can feed which step.
+
+### Changed
+
+- Handoff rules are marked as the single definition; other sections reference rather than repeat them.
+
 ## 2.3.0 — 2026-11-03
 
 ### Added
